@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>If true, portal css would be in rem units</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.service_portal.resize_text.dpJD.enable_rem_conversion</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 12:32:59</sys_created_on>
+        <sys_id>198b00b083435a90fc9154d6feaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.service_portal.resize_text.dpJD.enable_rem_conversion</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_properties_198b00b083435a90fc9154d6feaad3cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 12:32:59</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=198b00b083435a90fc9154d6feaad3cc"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_properties_198b00b083435a90fc9154d6feaad3cc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>If true, portal css would be in rem units</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.service_portal.resize_text.dpJD.enable_rem_conversion</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-09 12:32:59</sys_created_on>
+        <sys_id>198b00b083435a90fc9154d6feaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.service_portal.resize_text.dpJD.enable_rem_conversion</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_properties_198b00b083435a90fc9154d6feaad3cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-09 12:32:59</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=198b00b083435a90fc9154d6feaad3cc"/>
+</record_update>]]></payload>
+        <payload_hash>1930312196</payload_hash>
+        <record_name>glide.service_portal.resize_text.dpJD.enable_rem_conversion</record_name>
+        <reverted_from/>
+        <source>6526243c836b9e50fc9154d6feaad30e</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 11:00:55</sys_created_on>
+        <sys_id>6036283c836b9e50fc9154d6feaad320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194cb786f670000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 11:00:55</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>2c36283c7e6b9e5095e773f5f5c24b1f</update_guid>
+        <update_guid_history>2c36283c7e6b9e5095e773f5f5c24b1f:0,13e4b3bbc75bda10be5149144e076f89:-1882941256,ee733f774c5bda1062debd422c1f3b2d:0,7382b3bfb71bda1055d33db21b3ec717:-1882941256,ca52f33f951bda10148bc20de21cf845:0,3ef1bb3b941bda1061e3266945472fee:-1882941256,1670373f8bd7da10239ba5e7fb73842e:0,4dd31cd5631fde901067cd2c7d40e325:-1882941256,d1f014dd6a9bde9081bce81bf6d7ffa2:0,6c601c59c09bde90551fe2cc6e341a26:-1882941256,a9c7fb45188b56d02952f230c4853b94:0,ca97bbc1768b56d05d551ac6e69fec97:-1882941256,28b633c9ad4b56d043c2b4c5c1cc4ec7:0,43a4bfc5710b56d00aced73358b4bacf:-1882941256,e18bc4bcc5435a900bb6098d59469149:-747187284</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 11:34:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>0d0238e8a90a4f46b057584e29697e84</sys_id>
+        <sys_metadata>198b00b083435a90fc9154d6feaad3cc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.service_portal.resize_text.dpJD.enable_rem_conversion</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_properties_198b00b083435a90fc9154d6feaad3cc</sys_update_name>
+        <sys_update_version display_value="sys_properties_198b00b083435a90fc9154d6feaad3cc">6036283c836b9e50fc9154d6feaad320</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 11:34:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

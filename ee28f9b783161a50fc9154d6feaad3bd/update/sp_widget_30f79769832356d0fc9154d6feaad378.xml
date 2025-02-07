@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spModal,spUtil) {	
+	var c = this;
+	var nameInput='', nameOK=false, email='', emailOK=false, phoneNumber='', phoneNumberOK=false, question='';
+	const nameRegexp = /^[a-zA-Z ]+$/;  // ^[ a-zA-Z\-\']+$ - dash, space, and single quote. 
+	const emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const numberRegexp = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;  
+
+	c.displayName = function() {
+		nameInput =  c.data.name;	
+		nameOK= nameRegexp.test(nameInput);	
+		c.data.messageName = (nameOK) ?  ' '  : 'Vloz spravne meno ' ;
+	} 
+
+	c.displayEmail = function() {
+		email = c.data.email;
+		emailOK = emailRegexp.test(email);  		 
+		c.data.messageEmail = (emailOK) ?  ' '  : 'Vloz spravne email'  ;
+	}
+
+	c.displayPhone = function() {
+		phoneNumber = c.data.phone;
+		phoneNumberOK = numberRegexp.test(phoneNumber);
+		c.data.messagePhone =  (phoneNumberOK) ?  ' '  : 'Neobsahuje spravne telefonne cislo';
+	}
+
+	c.displayQuestion = function() {
+		question = c.data.question;		
+	}
+
+	c.displayName();
+	c.displayEmail();
+	c.displayPhone();
+	c.displayQuestion();
+
+	c.filledMandatoryFields = function(){
+		if(!emailOK || !phoneNumberOK || !nameOK ){
+			return false;
+		}
+		return true;
+	}
+
+	c.inputContactRecord = function(){		
+		spModal.confirm("Are you sure you want to add this Contact record?").then(function(confirmed){
+			if(confirmed){				
+				c.newContact();
+			} else {
+				spUtil.addTrivialMessage("The " + "contact record has error.");
+			}
+		});
+	}
+	c.newContact = function(){		 
+		c.server.get({
+			action: 'newContact',
+			name: nameInput,
+			emailes: email,
+			phoneNR: phoneNumber,
+			que: question
+		}).then(function(r){
+			spUtil.addTrivialMessage("The " + "contact record has been inserted.");
+			c.data.contacts.unshift(r.data.newContact());
+			c.data.contactID = r.data.contactID;
+			//		$rootScope.contactID =c.data.contactID;
+		});
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"data": {
+		"name": "Johan",
+			"email": "johan.d@gmail.com",				 
+				"phone": "0011223344"
+	}
+}
+</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>diskyplech</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>DiskyPlech</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.contacts = [];
+
+
+	if (input){
+		if(input.action=='newContact'){
+			var contactGR = new GlideRecord('x_1461179_disk_sho_customer_contacts');
+			contactGR.newRecord();
+			contactGR.setValue('u_name', input.name);
+			contactGR.setValue('u_email', input.emailes);
+			contactGR.setValue('u_phone', input.phoneNR);
+			contactGR.setValue('u_question', input.que);		
+
+			console.log(data.loggedinUser+' has clicked '+input.name  + ", " + input.emailes);
+
+			var id = contactGR.insert();
+			data.contactID = id;
+			data.newContact = {};		 
+
+			// getRecordValues(): copies values for the specified field names from the GlideRecord into the data parameter
+			$sp.getRecordValues(data.newContact,contactGR,"u_name,u_email, u_phone_number, u_question, sys_id");
+
+		}
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-06 07:52:58</sys_created_on>
+        <sys_id>30f79769832356d0fc9154d6feaad378</sys_id>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>DiskyPlech</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_widget_30f79769832356d0fc9154d6feaad378</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 12:02:45</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <meta property="og:url" content="https://dev203221.service-now.com/dspJD?id=disky_plech/"> 
+    <link rel="next" href="/dspJD?id=disky_plech/"> 
+    <h3 class="panel-title pull-left">
+      ${Plechove disky}
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="inner-wrap">
+
+      <div id="left" class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+        <nav>
+          <ul id="left-nav" class="nav nav-pills nav-stacked">
+            <li class="page-1">
+              <a href="https://dev203221.service-now.com/dspJD/" title="Homepage" class="page-1"> Home page </a>
+            </li>
+            <li class="page-2">
+              <a href="https://dev203221.service-now.com/dspJD?id=introduction_list" title="Introduction List" class="page-2"> Introduction List </a>
+            </li>
+            <li class="page-3 active">
+              <a href="https://dev203221.service-now.com/dspJD?id=disky_plech/" title="Plechove disky" class="page-3"> Plechove disky </a>
+
+              <ul class="nav nav-pills nav-stacked">
+                <li class="page-11">
+                  <a href="https://dev203221.service-now.com/dspJD/disky_plech?id=bmw_discs" title="BMW discs" class="page-11"> BMW disky </a>
+                </li>
+                <li class="page-12">
+                  <a href="https://dev203221.service-now.com/dspJD/disky_plech?id=audi_discs" title="AUDI discs" class="page-12"> AUDI disky </a>
+                </li> 
+              </ul>
+
+
+            <li class="page-4">
+              <a href="/disc_BMW_cust/" title="Elektronove disky" class="page-4"> Elektronove disky </a>
+            </li> 
+            <li class="page-5"> 
+              <a href="https://dev203221.service-now.com/dspJD?id=news" title="News" class="page-5">News</a>
+            </li>              
+            <li class="page-6"> 
+              <a href="https://dev203221.service-now.com/dspJD?id=write_us" title="Write Us" class="page-6">Write Us</a>
+            </li>
+            <li class="page-7"> 
+              <a href="https://dev203221.service-now.com/dspJD?id=contact_information" title="Kontakt" class="page-7">Kontakt</a>
+            </li>
+
+          </ul>
+
+        </nav>
+      </div>
+
+      <div id="content" class="col-xs-12 col-sm-9 col-sm-9 col-md-10 col-lg-10">
+
+        <div class="inner-wrap">
+
+          <!--/div-->
+
+          <article> 
+            <h3 class="no-border">
+              Plechove disky
+            </h3>             
+
+            <div id="DiskyPlech" class="filter-form main-filter">
+              <form act☼on method="get" novalidate>
+                <noscript></noscript>
+                <div class="main">
+                  <div class="field znacka_auta">                   
+
+                    <label for="frm-znacka_auta"> Znacka auta </label> 
+                    <div>
+                      <select name="znacka_auta" data-dependent="vykon_auta" data-name="znacka_auta" class="watch" id="frm-znacka_auta">
+                        <option> vsetky auta </option>
+                        <option> BMW </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="field model_auta">
+
+                    <label for="frm-model_auta"> Model auta </label>                    
+                    <div>
+                      <select name="model_auta" data-name="model_auta" class="watch" id="frm-model_auta">
+                        <option> vyber znacku auta </option>                         
+                      </select>
+                    </div>
+
+                  </div>
+
+                  <div class="field vykon_auta">
+                    <label for="frm-vykon_auta"> Vykon auta </label>                    
+                    <div>
+                      <select name="vykon_auta" data-name="znacka_auta" class="watch" id="frm-vykon_auta">
+                        <option> vyber model auta </option>
+                      </select>
+                    </div>
+
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
+
+    <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">    
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

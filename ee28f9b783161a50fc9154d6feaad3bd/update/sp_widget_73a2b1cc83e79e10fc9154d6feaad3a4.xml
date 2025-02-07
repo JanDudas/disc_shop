@@ -122,42 +122,89 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-01 08:39:39</sys_created_on>
         <sys_id>73a2b1cc83e79e10fc9154d6feaad3a4</sys_id>
-        <sys_mod_count>118</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>write us</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sp_widget_73a2b1cc83e79e10fc9154d6feaad3a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-03 09:54:22</sys_updated_on>
+        <sys_updated_on>2025-02-06 17:49:10</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading clearfix">
+    <meta property="og:url" content="https://dev203221.service-now.com/dspJD?id=write_us"> 
+    <link rel="next" href="/dspJD?id=write_us"> 
     <h3 class="panel-title pull-left">
       ${Write Us}
     </h3>
   </div>
 
   <div class="panel-body">
+
     <div class="inner-wrap">
-      <label for="frm-name" class="control-label"> Meno a priezvisko: </label>
-      <input type="text" name="name" id="frm-name" class="form-control" cols="60" ng-model="c.data.name" ng-change="c.displayName()">
-      <h4 style="color:red">{{ c.data.messageName }}</h4>
 
-      <label for="frm-email" class="control-label">E-mailová adresa:</label>
-      <input type="text" name="email" id="frm-email" class="form-control"  cols="60" ng-model="c.data.email" ng-change="c.displayEmail()">
-      <h4 style="color:red">{{ c.data.messageEmail }}</h4>
+      <div id="content-holder" class="container">
 
-      <label for="frm-phone" class="control-label"> Vase telefonne cislo: </label>
-      <input type="text" name="phone" id="frm-phone" class="form-control" cols="60" ng-model="c.data.phone" ng-change="c.displayPhone()">
-      <h4 style="color:red">{{ c.data.messagePhone }}</h4>
+        <div id="left" class="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+          <nav>
+            <ul id="left-nav" class="nav nav-pills nav-stacked">
+              <li class="page-1">
+                <a href="https://dev203221.service-now.com/dspJD/" title="Homepage" class="page-1"> Home page </a>
+              </li>
+              <li class="page-2">
+                <a href="https://dev203221.service-now.com/dspJD?id=introduction_list" title="Introduction List" class="page-2"> Introduction List </a>
+              </li>
+              <li class="page-3">
+                <a href="https://dev203221.service-now.com/dspJD?id=disky_plech" title="Plechove disky" class="page-3"> Plechove disky </a>
+              </li>
+              <li class="page-4">
+                <a href="/disc_BMW_cust/" title="Elektronove disky" class="page-4"> Elektronove disky </a>
+              </li> 
+              <li class="page-5"> 
+                <a href="https://dev203221.service-now.com/dspJD?id=news" title="News" class="page-5">News</a>
+              </li>              
+              <li class="page-6 active"> 
+                <a href="https://dev203221.service-now.com/dspJD?id=write_us" title="Write Us" class="page-6">Write Us</a>
+              </li>
+              <li class="page-7"> 
+                <a href="https://dev203221.service-now.com/dspJD?id=contact_information" title="Kontakt" class="page-7">Kontakt</a>
+              </li>
+            </ul>
 
-      <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
+          </nav>
+        </div>
 
-      <label for="frm-question" class="control-label">Zadajte otázku:</label>
-      <textarea name="question" id="frm-question" class="form-control" ng-model="c.data.question" ng-change="c.displayQuestion()" ></textarea>
+        <div id="content" class="col-xs-12 col-sm-9 col-sm-9 col-md-10 col-lg-10">
 
-      <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">    
+          <div class="inner-wrap">
+            <label for="frm-name" class="control-label"> Meno a priezvisko: </label>
+            <input type="text" name="name" id="frm-name" class="form-control" cols="60" ng-model="c.data.name" ng-change="c.displayName()">
+            <h4 style="color:red">{{ c.data.messageName }}</h4>
+
+            <label for="frm-email" class="control-label">E-mailová adresa:</label>
+            <input type="text" name="email" id="frm-email" class="form-control"  cols="60" ng-model="c.data.email" ng-change="c.displayEmail()">
+            <h4 style="color:red">{{ c.data.messageEmail }}</h4>
+
+            <label for="frm-phone" class="control-label"> Vase telefonne cislo: </label>
+            <input type="text" name="phone" id="frm-phone" class="form-control" cols="60" ng-model="c.data.phone" ng-change="c.displayPhone()">
+            <h4 style="color:red">{{ c.data.messagePhone }}</h4>
+
+            <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
+
+            <label for="frm-question" class="control-label">Zadajte otázku:</label>
+            <textarea name="question" id="frm-question" class="form-control" ng-model="c.data.question" ng-change="c.displayQuestion()" ></textarea>
+
+            <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">    
+
+
+          </div>          
+
+        </div>
+
+      </div>
+
     </div>
+
   </div>
 </div>]]></template>
     </sp_widget>

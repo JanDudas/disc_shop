@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spModal,spUtil) {	
+	var c = this;
+	var nameInput='', nameOK=false, email='', emailOK=false, phoneNumber='', phoneNumberOK=false, question='';
+	const nameRegexp = /^[a-zA-Z ]+$/;  // ^[ a-zA-Z\-\']+$ - dash, space, and single quote. 
+	const emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const numberRegexp = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;  
+
+	c.displayName = function() {
+		nameInput =  c.data.name;	
+		nameOK= nameRegexp.test(nameInput);	
+		c.data.messageName = (nameOK) ?  ' '  : 'Vloz spravne meno ' ;
+	} 
+
+	c.displayEmail = function() {
+		email = c.data.email;
+		emailOK = emailRegexp.test(email);  		 
+		c.data.messageEmail = (emailOK) ?  ' '  : 'Vloz spravne email'  ;
+	}
+
+	c.displayPhone = function() {
+		phoneNumber = c.data.phone;
+		phoneNumberOK = numberRegexp.test(phoneNumber);
+		c.data.messagePhone =  (phoneNumberOK) ?  ' '  : 'Neobsahuje spravne telefonne cislo';
+	}
+
+	c.displayQuestion = function() {
+		question = c.data.question;		
+	}
+
+	c.displayName();
+	c.displayEmail();
+	c.displayPhone();
+	c.displayQuestion();
+
+	c.filledMandatoryFields = function(){
+		if(!emailOK || !phoneNumberOK || !nameOK ){
+			return false;
+		}
+		return true;
+	}
+
+	c.inputContactRecord = function(){		
+		spModal.confirm("Are you sure you want to add this Contact record?").then(function(confirmed){
+			if(confirmed){				
+				c.newContact();
+			} else {
+				spUtil.addTrivialMessage("The " + "contact record has error.");
+			}
+		});
+	}
+	c.newContact = function(){		 
+		c.server.get({
+			action: 'newContact',
+			name: nameInput,
+			emailes: email,
+			phoneNR: phoneNumber,
+			que: question
+		}).then(function(r){
+			spUtil.addTrivialMessage("The " + "contact record has been inserted.");
+			c.data.contacts.unshift(r.data.newContact());
+			c.data.contactID = r.data.contactID;
+			//		$rootScope.contactID =c.data.contactID;
+		});
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"data": {
+		"name": "Johan",
+			"email": "johan.d@gmail.com",				 
+				"phone": "0011223344"
+	}
+}
+</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>introduction</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>introduction</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.contacts = [];
+
+
+	if (input){
+		if(input.action=='newContact'){
+			var contactGR = new GlideRecord('x_1461179_disk_sho_customer_contacts');
+			contactGR.newRecord();
+			contactGR.setValue('u_name', input.name);
+			contactGR.setValue('u_email', input.emailes);
+			contactGR.setValue('u_phone', input.phoneNR);
+			contactGR.setValue('u_question', input.que);		
+
+			console.log(data.loggedinUser+' has clicked '+input.name  + ", " + input.emailes);
+
+			var id = contactGR.insert();
+			data.contactID = id;
+			data.newContact = {};		 
+
+			// getRecordValues(): copies values for the specified field names from the GlideRecord into the data parameter
+			$sp.getRecordValues(data.newContact,contactGR,"u_name,u_email, u_phone_number, u_question, sys_id");
+
+		}
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 15:20:43</sys_created_on>
+        <sys_id>d6a1a5f0836fde50fc9154d6feaad3f8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>introduction</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_widget_d6a1a5f0836fde50fc9154d6feaad3f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 15:24:08</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">
+      ${Introduction}
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="inner-wrap">
+      
+      
+      <label for="frm-name" class="control-label"> Meno a priezvisko: </label>
+      <input type="text" name="name" id="frm-name" class="form-control" cols="60" ng-model="c.data.name" ng-change="c.displayName()">
+      <h4 style="color:red">{{ c.data.messageName }}</h4>
+
+       
+
+      <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
+
+      <label for="frm-question" class="control-label">Zadajte otázku:</label>
+      <textarea name="question" id="frm-question" class="form-control" ng-model="c.data.question" ng-change="c.displayQuestion()" ></textarea>
+
+      <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">    
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sp_widget_d6a1a5f0836fde50fc9154d6feaad3f8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function(spModal,spUtil) {	
+	var c = this;
+	var nameInput='', nameOK=false, email='', emailOK=false, phoneNumber='', phoneNumberOK=false, question='';
+	const nameRegexp = /^[a-zA-Z ]+$/;  // ^[ a-zA-Z\-\']+$ - dash, space, and single quote. 
+	const emailRegexp = /^(([^&lt;&gt;()\[\]\\.,;:\s@"]+(\.[^&lt;&gt;()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const numberRegexp = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;  
+
+	c.displayName = function() {
+		nameInput =  c.data.name;	
+		nameOK= nameRegexp.test(nameInput);	
+		c.data.messageName = (nameOK) ?  ' '  : 'Vloz spravne meno ' ;
+	} 
+
+	c.displayEmail = function() {
+		email = c.data.email;
+		emailOK = emailRegexp.test(email);  		 
+		c.data.messageEmail = (emailOK) ?  ' '  : 'Vloz spravne email'  ;
+	}
+
+	c.displayPhone = function() {
+		phoneNumber = c.data.phone;
+		phoneNumberOK = numberRegexp.test(phoneNumber);
+		c.data.messagePhone =  (phoneNumberOK) ?  ' '  : 'Neobsahuje spravne telefonne cislo';
+	}
+
+	c.displayQuestion = function() {
+		question = c.data.question;		
+	}
+
+	c.displayName();
+	c.displayEmail();
+	c.displayPhone();
+	c.displayQuestion();
+
+	c.filledMandatoryFields = function(){
+		if(!emailOK || !phoneNumberOK || !nameOK ){
+			return false;
+		}
+		return true;
+	}
+
+	c.inputContactRecord = function(){		
+		spModal.confirm("Are you sure you want to add this Contact record?").then(function(confirmed){
+			if(confirmed){				
+				c.newContact();
+			} else {
+				spUtil.addTrivialMessage("The " + "contact record has error.");
+			}
+		});
+	}
+	c.newContact = function(){		 
+		c.server.get({
+			action: 'newContact',
+			name: nameInput,
+			emailes: email,
+			phoneNR: phoneNumber,
+			que: question
+		}).then(function(r){
+			spUtil.addTrivialMessage("The " + "contact record has been inserted.");
+			c.data.contacts.unshift(r.data.newContact());
+			c.data.contactID = r.data.contactID;
+			//		$rootScope.contactID =c.data.contactID;
+		});
+	}
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data&gt;{
+	"data": {
+		"name": "Johan",
+			"email": "johan.d@gmail.com",				 
+				"phone": "0011223344"
+	}
+}
+&lt;/demo_data&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;introduction&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;introduction&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.contacts = [];
+
+
+	if (input){
+		if(input.action=='newContact'){
+			var contactGR = new GlideRecord('x_1461179_disk_sho_customer_contacts');
+			contactGR.newRecord();
+			contactGR.setValue('u_name', input.name);
+			contactGR.setValue('u_email', input.emailes);
+			contactGR.setValue('u_phone', input.phoneNR);
+			contactGR.setValue('u_question', input.que);		
+
+			console.log(data.loggedinUser+' has clicked '+input.name  + ", " + input.emailes);
+
+			var id = contactGR.insert();
+			data.contactID = id;
+			data.newContact = {};		 
+
+			// getRecordValues(): copies values for the specified field names from the GlideRecord into the data parameter
+			$sp.getRecordValues(data.newContact,contactGR,"u_name,u_email, u_phone_number, u_question, sys_id");
+
+		}
+	}
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-03 15:20:43&lt;/sys_created_on&gt;&lt;sys_id&gt;d6a1a5f0836fde50fc9154d6feaad3f8&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;introduction&lt;/sys_name&gt;&lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_d6a1a5f0836fde50fc9154d6feaad3f8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-03 15:24:08&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="panel panel-default"&gt;
+  &lt;div class="panel-heading clearfix"&gt;
+    &lt;h3 class="panel-title pull-left"&gt;
+      ${Introduction}
+    &lt;/h3&gt;
+  &lt;/div&gt;
+
+  &lt;div class="panel-body"&gt;
+    &lt;div class="inner-wrap"&gt;
+      
+      
+      &lt;label for="frm-name" class="control-label"&gt; Meno a priezvisko: &lt;/label&gt;
+      &lt;input type="text" name="name" id="frm-name" class="form-control" cols="60" ng-model="c.data.name" ng-change="c.displayName()"&gt;
+      &lt;h4 style="color:red"&gt;{{ c.data.messageName }}&lt;/h4&gt;
+
+       
+
+      &lt;!~-ng-if="c.data.phone.length != 10" &lt;!strong style="color:red"--&gt; 
+
+      &lt;label for="frm-question" class="control-label"&gt;Zadajte otázku:&lt;/label&gt;
+      &lt;textarea name="question" id="frm-question" class="form-control" ng-model="c.data.question" ng-change="c.displayQuestion()" &gt;&lt;/textarea&gt;
+
+      &lt;input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()"&gt;    
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-392043816</payload_hash>
+        <record_name>introduction</record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 15:24:08</sys_created_on>
+        <sys_id>907265f0836fde50fc9154d6feaad3f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194cc696aaf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 15:24:08</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>187265f02d6fde50e2f3ffcf2c3b5df3</update_guid>
+        <update_guid_history>187265f02d6fde50e2f3ffcf2c3b5df3:-392043816,4002e534e86fde50120bb9517f70f789:-88417932,2ea1a5f09a6fde501f0bfe3558afb1fb:613099215</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="introduction">f5be763483af5290fc9154d6feaad384</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 22:07:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>0e47639da42348f08d420b3e728f6704</sys_id>
+        <sys_metadata>d6a1a5f0836fde50fc9154d6feaad3f8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>introduction</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sp_widget_d6a1a5f0836fde50fc9154d6feaad3f8</sys_update_name>
+        <sys_update_version display_value="sp_widget_d6a1a5f0836fde50fc9154d6feaad3f8">907265f0836fde50fc9154d6feaad3f4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 22:07:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

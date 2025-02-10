@@ -4,7 +4,7 @@
         <client_script><![CDATA[function($scope,$rootScope,spModal,spUtil) {	
 	var c = this;
 
-console.log('Dear JD, z body disc  ID  $rootScope.discID  je: ');
+ 
 
 	// button.addEventListener("click", c.updateButton);
 	//             <input type="button" value="display All" name="display All" ng-click="c.updateButton()"> 
@@ -80,14 +80,14 @@ console.log('Dear JD, z body disc  ID  $rootScope.discID  je: ');
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-09 11:50:04</sys_created_on>
         <sys_id>57faebe68323de14fc9154d6feaad350</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>bmw body disc</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sp_widget_57faebe68323de14fc9154d6feaad350</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-10 07:14:40</sys_updated_on>
+        <sys_updated_on>2025-02-10 11:08:28</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
 
   <div class="panel-heading clearfix">    

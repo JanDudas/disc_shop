@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_performance</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>BMW Disc Price All Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+    var price = g_form.getValue('u_price');
+    g_form.clearOptions('u_price');
+
+    var priceAllPieces = g_form.getValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_price', 0, 'Select Performance of the Car');
+            break;
+        case (newValue == 1):
+            g_form.addOption('u_price', 2, '10');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+        case (newValue == 2):
+            g_form.addOption('u_price', 3, '15');
+            break;
+        case (newValue == 3):
+            g_form.addOption('u_price', 4, '20');
+            break;
+        case (newValue == 4):
+            g_form.addOption('u_price', 5, '25');
+            break;
+        case (newValue == 5):
+            g_form.addOption('u_price', 6, '30');
+            break;
+        case (newValue == 6):
+            g_form.addOption('u_price', 7, '35');
+            break;
+        case (newValue == 7):
+            g_form.addOption('u_price', 8, '40');
+            break;
+        case (newValue == 8):
+            g_form.addOption('u_price', 9, '45');
+            break;
+        case (newValue == 9):
+            g_form.addOption('u_price', 10, '50');
+            break;
+        case (newValue == 10):
+            g_form.addOption('u_price', 4, '20');
+            break;
+        case (newValue == 11):
+            g_form.addOption('u_price', 5, '25');
+            break;
+        case (newValue == 12):
+            g_form.addOption('u_price', 6, '30');
+            break;
+        case (newValue == 13):
+            g_form.addOption('u_price', 7, '35');
+            break;
+        case (newValue == 14):
+            g_form.addOption('u_price', 8, '40');
+            break;
+        case (newValue == 15):
+            g_form.addOption('u_price', 10, '50');
+            break;
+        default:
+            alert("none disc performance");
+            break;
+    }
+    var five = 5;
+    var pric = g_form.getIntValue('u_price');
+    var priceOfOneValue = pric * five;
+    var countValue = g_form.getIntValue('u_count');
+    var value = priceOfOneValue * countValue;
+
+    g_form.setValue('u_priceallpcs', value);
+
+    // g_form.addErrorMessage('JD priceOfOneValue je ' + priceOfOneValue);
+    // g_form.addErrorMessage('JD countValue je ' + countValue);
+    // g_form.addErrorMessage('JD five * priceOfOneValue * countValuee je ' + value);
+    // g_form.addErrorMessage();
+
+    if (isLoading && !g_form.isNewRecord()) {
+        // control, oldValue,  
+        g_form.setValue('u_price', price);
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 08:41:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c8d8804f83679654fc9154d6feaad31a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BMW Disc Price All Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_c8d8804f83679654fc9154d6feaad31a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 08:41:42</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw_admin</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

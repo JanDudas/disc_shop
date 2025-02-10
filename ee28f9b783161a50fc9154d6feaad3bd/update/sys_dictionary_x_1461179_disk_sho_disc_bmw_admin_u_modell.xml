@@ -10,13 +10,13 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice/>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Model</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>0</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -33,7 +33,7 @@
         <function_definition/>
         <function_field>false</function_field>
         <internal_type display_value="Integer">integer</internal_type>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>40</max_length>
         <name>x_1461179_disk_sho_disc_bmw_admin</name>
         <next_element/>
@@ -58,7 +58,7 @@
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sys_dictionary_x_1461179_disk_sho_disc_bmw_admin_u_modell</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-09 23:51:13</sys_updated_on>
+        <sys_updated_on>2025-02-10 10:18:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

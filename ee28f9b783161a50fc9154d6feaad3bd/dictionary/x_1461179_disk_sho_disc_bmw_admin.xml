@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="efed8ab28327d254fc9154d6feaad307" label="disc_BMW_Admin" max_length="40" name="x_1461179_disk_sho_disc_bmw_admin" type="collection">
+        <element label="PriceAllPcs" max_length="40" name="u_priceallpcs" type="integer"/>
+        <element label="Performance" max_length="40" name="u_performance" type="integer"/>
+        <element label="Model" max_length="40" name="u_modell" type="integer"/>
+        <element label="Price of 1 pcs" max_length="40" name="u_price" type="integer"/>
+        <element label="RequestedCount" max_length="40" name="u_requestedcount" type="integer"/>
+        <element label="Mark" max_length="40" name="u_mark" type="integer"/>
+        <element label="Number" max_length="40" name="number" type="string"/>
+        <element label=" Count" max_length="40" name="u_count" type="integer"/>
+        <element label="Additional comments" max_length="4000" name="u_comments" type="journal_input"/>
+        <element label="Created" max_length="40" name="u_created" type="glide_date_time"/>
+        <element label="Work notes" max_length="4000" name="u_notes" type="journal_input"/>
+    </element>
+</database>

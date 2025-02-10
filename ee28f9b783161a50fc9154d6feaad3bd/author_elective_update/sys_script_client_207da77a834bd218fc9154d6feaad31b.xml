@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_performance</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>BMW Disc Price All Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+    var price = g_form.getValue('u_price');
+    g_form.clearOptions('u_price');
+
+    var priceAllPieces = g_form.getValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_price', 0, 'Select Performance of the Car');
+            break;
+        case (newValue == 1):
+            g_form.addOption('u_price', 2, '10');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+        case (newValue == 2):
+            g_form.addOption('u_price', 3, '15');
+            break;
+        case (newValue == 3):
+            g_form.addOption('u_price', 4, '20');
+            break;
+        case (newValue == 4):
+            g_form.addOption('u_price', 5, '25');
+            break;
+        case (newValue == 5):
+            g_form.addOption('u_price', 6, '30');
+            break;
+        case (newValue == 6):
+            g_form.addOption('u_price', 7, '35');
+            break;
+        case (newValue == 7):
+            g_form.addOption('u_price', 8, '40');
+            break;
+        case (newValue == 8):
+            g_form.addOption('u_price', 9, '45');
+            break;
+        case (newValue == 9):
+            g_form.addOption('u_price', 10, '50');
+            break;
+        case (newValue == 10):
+            g_form.addOption('u_price', 4, '20');
+            break;
+        case (newValue == 11):
+            g_form.addOption('u_price', 5, '25');
+            break;
+        case (newValue == 12):
+            g_form.addOption('u_price', 6, '30');
+            break;
+        case (newValue == 13):
+            g_form.addOption('u_price', 7, '35');
+            break;
+        case (newValue == 14):
+            g_form.addOption('u_price', 8, '40');
+            break;
+        case (newValue == 15):
+            g_form.addOption('u_price', 10, '50');
+            break;
+        default:
+            alert("none disc performance");
+            break;
+    }
+    var five = 5;
+    var pric = g_form.getIntValue('u_price');
+    var priceOfOneValue = pric * five;
+    var countValue = g_form.getIntValue('u_count');
+    var value = priceOfOneValue * countValue;
+
+    g_form.setValue('u_priceallpcs', value);
+
+    // g_form.addErrorMessage('JD priceOfOneValue je ' + priceOfOneValue);
+    // g_form.addErrorMessage('JD countValue je ' + countValue);
+    // g_form.addErrorMessage('JD five * priceOfOneValue * countValuee je ' + value);
+    // g_form.addErrorMessage();
+
+    if (isLoading && !g_form.isNewRecord()) {
+        // control, oldValue,  
+        g_form.setValue('u_price', price);
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 10:09:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>207da77a834bd218fc9154d6feaad31b</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>BMW Disc Price All Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_207da77a834bd218fc9154d6feaad31b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:30:56</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_client_207da77a834bd218fc9154d6feaad31b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;
+    &lt;sys_script_client action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;applies_extended&gt;false&lt;/applies_extended&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;field&gt;u_performance&lt;/field&gt;
+        &lt;global&gt;true&lt;/global&gt;
+        &lt;isolate_script&gt;true&lt;/isolate_script&gt;
+        &lt;messages/&gt;
+        &lt;name&gt;BMW Disc Price All Options&lt;/name&gt;
+        &lt;order/&gt;
+        &lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+    var price = g_form.getValue('u_price');
+    g_form.clearOptions('u_price');
+
+    var priceAllPieces = g_form.getValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_price', 0, 'Select Performance of the Car');
+            break;
+        case (newValue == 1):
+            g_form.addOption('u_price', 2, '10');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+        case (newValue == 2):
+            g_form.addOption('u_price', 3, '15');
+            break;
+        case (newValue == 3):
+            g_form.addOption('u_price', 4, '20');
+            break;
+        case (newValue == 4):
+            g_form.addOption('u_price', 5, '25');
+            break;
+        case (newValue == 5):
+            g_form.addOption('u_price', 6, '30');
+            break;
+        case (newValue == 6):
+            g_form.addOption('u_price', 7, '35');
+            break;
+        case (newValue == 7):
+            g_form.addOption('u_price', 8, '40');
+            break;
+        case (newValue == 8):
+            g_form.addOption('u_price', 9, '45');
+            break;
+        case (newValue == 9):
+            g_form.addOption('u_price', 10, '50');
+            break;
+        case (newValue == 10):
+            g_form.addOption('u_price', 4, '20');
+            break;
+        case (newValue == 11):
+            g_form.addOption('u_price', 5, '25');
+            break;
+        case (newValue == 12):
+            g_form.addOption('u_price', 6, '30');
+            break;
+        case (newValue == 13):
+            g_form.addOption('u_price', 7, '35');
+            break;
+        case (newValue == 14):
+            g_form.addOption('u_price', 8, '40');
+            break;
+        case (newValue == 15):
+            g_form.addOption('u_price', 10, '50');
+            break;
+        default:
+            alert("none disc performance");
+            break;
+    }
+    var five = 5;
+    var pric = g_form.getIntValue('u_price');
+    var priceOfOneValue = pric * five;
+    var countValue = g_form.getIntValue('u_count');
+    var value = priceOfOneValue * countValue;
+
+    g_form.setValue('u_priceallpcs', value);
+
+    // g_form.addErrorMessage('JD priceOfOneValue je ' + priceOfOneValue);
+    // g_form.addErrorMessage('JD countValue je ' + countValue);
+    // g_form.addErrorMessage('JD five * priceOfOneValue * countValuee je ' + value);
+    // g_form.addErrorMessage();
+
+    if (isLoading &amp;&amp; !g_form.isNewRecord()) {
+        // control, oldValue,  
+        g_form.setValue('u_price', price);
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+    }
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2025-01-16 10:09:57&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;207da77a834bd218fc9154d6feaad31b&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;BMW Disc Price All Options&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_client_207da77a834bd218fc9154d6feaad31b&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2025-01-16 14:30:56&lt;/sys_updated_on&gt;
+        &lt;table&gt;x_1461179_disk_sho_disc_bmw&lt;/table&gt;
+        &lt;type&gt;onChange&lt;/type&gt;
+        &lt;ui_type&gt;0&lt;/ui_type&gt;
+        &lt;view/&gt;
+    &lt;/sys_script_client&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-2022347211</payload_hash>
+        <record_name>BMW Disc Price All Options</record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:50</sys_created_on>
+        <sys_id>7834ae4283eb1214fc9154d6feaad34d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e17072560000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:50</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>3434ae42e9eb12141bf706783034494d</update_guid>
+        <update_guid_history>3434ae42e9eb12141bf706783034494d:0,a143ae4e07ab121476ea29e8f202026e:-809393979,fb18ecfc996b9e5022732ea7eeb00e49:0,9246ec3cb86b9e508c33c3675ef78e1b:-809393979,b836283c526b9e50014525bc6e463b53:0,53f13f3b481bda1015bebb5d3c007820:-809393979,a270373fead7da1015fa9342df21e6b8:0,c2919055eedbde90a172ab9148a36c5e:-809393979,220114118adbde90b9ef2b13bee78fb7:0,19609c59649bde902b338b194eab339e:-809393979,d5a96403824796186de4e8956c64c7bd:-1105500207,d369a8cb74079618186b22b3ad30452a:-627371149,358fc48b18035618f09efd4e3dadf15c:-1289940397,125e400348435618177b66f1130749f3:580696957,602e08cf670356188e364cd7c1260720:1623034955,5b99c04f324f16186efa170723b03c41:942848131,83880cc34d4f16184465b55935f8129b:1299794070,dc080c836c4f1618e07d48a6e82193ff:564187765,7bd7cccb6b4f16186f2730ef7a3ade5d:628774191,d7b70ccb614f161832544794401726bb:241438093,bfb6408fd20f161809952cd971b174cd:-772735120,69a2008fc9c716180a5bfa1c746f5a17:-1313912075,5e3e3b76c88716180b23ececa4823b3d:-1303797316,d6ed6bfa618bd2181d6227e4965c5f50:-218942204</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>0068240b1ef8465c800080f28500a3c1</sys_id>
+        <sys_metadata>207da77a834bd218fc9154d6feaad31b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BMW Disc Price All Options</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">09b864c9838712d0fc9154d6feaad324</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_client_207da77a834bd218fc9154d6feaad31b</sys_update_name>
+        <sys_update_version display_value="sys_script_client_207da77a834bd218fc9154d6feaad31b">7834ae4283eb1214fc9154d6feaad34d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

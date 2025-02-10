@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="u_requestcount" table="x_1461179_disk_sho_disc_bmw">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>RequestedCount</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value>0</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_requestcount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="Integer">integer</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <name>x_1461179_disk_sho_disc_bmw</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 07:35:36</sys_created_on>
+        <sys_name>RequestedCount</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_dictionary_x_1461179_disk_sho_disc_bmw_u_requestcount</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:14:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_dictionary_x_1461179_disk_sho_disc_bmw_u_requestcount</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;
+    &lt;sys_dictionary action="INSERT_OR_UPDATE" element="u_requestcount" table="x_1461179_disk_sho_disc_bmw"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;array&gt;false&lt;/array&gt;
+        &lt;attributes/&gt;
+        &lt;audit&gt;false&lt;/audit&gt;
+        &lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;
+        &lt;choice&gt;3&lt;/choice&gt;
+        &lt;choice_field/&gt;
+        &lt;choice_table/&gt;
+        &lt;column_label&gt;RequestedCount&lt;/column_label&gt;
+        &lt;comments/&gt;
+        &lt;create_roles/&gt;
+        &lt;default_value&gt;0&lt;/default_value&gt;
+        &lt;defaultsort/&gt;
+        &lt;delete_roles/&gt;
+        &lt;dependent/&gt;
+        &lt;dependent_on_field/&gt;
+        &lt;display&gt;false&lt;/display&gt;
+        &lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+        &lt;dynamic_creation_script/&gt;
+        &lt;dynamic_default_value/&gt;
+        &lt;dynamic_ref_qual/&gt;
+        &lt;element&gt;u_requestcount&lt;/element&gt;
+        &lt;element_reference&gt;false&lt;/element_reference&gt;
+        &lt;foreign_database/&gt;
+        &lt;formula/&gt;
+        &lt;function_definition/&gt;
+        &lt;function_field&gt;false&lt;/function_field&gt;
+        &lt;internal_type display_value="Integer"&gt;integer&lt;/internal_type&gt;
+        &lt;mandatory&gt;false&lt;/mandatory&gt;
+        &lt;max_length&gt;40&lt;/max_length&gt;
+        &lt;name&gt;x_1461179_disk_sho_disc_bmw&lt;/name&gt;
+        &lt;next_element/&gt;
+        &lt;primary&gt;false&lt;/primary&gt;
+        &lt;read_only&gt;true&lt;/read_only&gt;
+        &lt;read_roles/&gt;
+        &lt;reference/&gt;
+        &lt;reference_cascade_rule/&gt;
+        &lt;reference_floats&gt;false&lt;/reference_floats&gt;
+        &lt;reference_key/&gt;
+        &lt;reference_qual/&gt;
+        &lt;reference_qual_condition/&gt;
+        &lt;reference_type/&gt;
+        &lt;spell_check&gt;false&lt;/spell_check&gt;
+        &lt;staged&gt;false&lt;/staged&gt;
+        &lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2025-01-14 07:35:36&lt;/sys_created_on&gt;
+        &lt;sys_name&gt;RequestedCount&lt;/sys_name&gt;
+        &lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_dictionary_x_1461179_disk_sho_disc_bmw_u_requestcount&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2025-01-16 14:14:07&lt;/sys_updated_on&gt;
+        &lt;table_reference&gt;false&lt;/table_reference&gt;
+        &lt;text_index&gt;false&lt;/text_index&gt;
+        &lt;unique&gt;false&lt;/unique&gt;
+        &lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+        &lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+        &lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+        &lt;virtual&gt;false&lt;/virtual&gt;
+        &lt;virtual_type&gt;script&lt;/virtual_type&gt;
+        &lt;widget/&gt;
+        &lt;write_roles/&gt;
+        &lt;xml_view&gt;false&lt;/xml_view&gt;
+    &lt;/sys_dictionary&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>500487904</payload_hash>
+        <record_name>disc_BMW_admin.RequestedCount</record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:46</sys_created_on>
+        <sys_id>3f242e4283eb1214fc9154d6feaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e17061d40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:46</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>f7242e425beb121473e00ec54c096d48</update_guid>
+        <update_guid_history>f7242e425beb121473e00ec54c096d48:0,01636ace6fab12147e65db590f7e1a89:472887496,4b18acfcfa6b9e50290fc1bd8697bc4e:0,bb56647ce06b9e500d728095001fbdc5:472887496,2726a43c1d6b9e5043e7288d180ba0af:0,2d12ff7b331bda102adfc15c6c01807c:472887496,0970fffb7ad7da10d25561fda030c8b6:0,efa1d0953fdbde9093686068efbadf23:472887496,02019011acdbde90b4e745d68a61ad5a:0,0d8094d9a69bde90140d3a69fbca52b9:472887496,87c5e80f18439618b430a41b4f48dbf3:-259724012,e1020ade29839694179c444860564982:-667014474,703eb55e3c03969408a18694d7a135fc:1567386199,830870d678cb929422c5a9391bd69e50:-994648137,8a67b45e498b9294ff514eb9445c61af:-1801207691</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:19:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>02b02d2e21d14ffc800992322cc4fe10</sys_id>
+        <sys_metadata>fe24aa4283eb1214fc9154d6feaad3db</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RequestedCount</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">09b864c9838712d0fc9154d6feaad324</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1461179_disk_sho_disc_bmw_u_requestcount</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1461179_disk_sho_disc_bmw_u_requestcount">3f242e4283eb1214fc9154d6feaad348</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:19:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

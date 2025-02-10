@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1461179_disk_sho_disc_bmw</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Checking  BMW Count </name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var countDiscs = current.u_count;
+    if (countDiscs < 0 || countDiscs > 25) {
+
+        gs.addErrorMessage(" The count of Discs has bad values. " + countDiscs);
+        current.setAbortAction(true);
+
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 14:29:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>976312da8303d694fc9154d6feaad324</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Checking  BMW Count </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_976312da8303d694fc9154d6feaad324</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:51:43</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=976312da8303d694fc9154d6feaad324"/>
+    <sys_es_latest_script action="DELETE">
+        <id>976312da8303d694fc9154d6feaad324</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-14 14:29:25</sys_created_on>
+        <sys_id>a31616da8303d694fc9154d6feaad33f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 14:29:25</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_976312da8303d694fc9154d6feaad324</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;
+    &lt;sys_script action="INSERT_OR_UPDATE"&gt;
+        &lt;abort_action&gt;false&lt;/abort_action&gt;
+        &lt;access&gt;package_private&lt;/access&gt;
+        &lt;action_delete&gt;false&lt;/action_delete&gt;
+        &lt;action_insert&gt;true&lt;/action_insert&gt;
+        &lt;action_query&gt;false&lt;/action_query&gt;
+        &lt;action_update&gt;true&lt;/action_update&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;add_message&gt;false&lt;/add_message&gt;
+        &lt;advanced&gt;true&lt;/advanced&gt;
+        &lt;change_fields&gt;false&lt;/change_fields&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;collection&gt;x_1461179_disk_sho_disc_bmw&lt;/collection&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;execute_function&gt;false&lt;/execute_function&gt;
+        &lt;filter_condition/&gt;
+        &lt;is_rest&gt;false&lt;/is_rest&gt;
+        &lt;message/&gt;
+        &lt;name&gt;Checking  BMW Count &lt;/name&gt;
+        &lt;order&gt;100&lt;/order&gt;
+        &lt;priority&gt;100&lt;/priority&gt;
+        &lt;rest_method/&gt;
+        &lt;rest_method_text/&gt;
+        &lt;rest_service/&gt;
+        &lt;rest_service_text/&gt;
+        &lt;rest_variables/&gt;
+        &lt;role_conditions/&gt;
+        &lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var countDiscs = current.u_count;
+    if (countDiscs &lt; 0 || countDiscs &gt; 25) {
+
+        gs.addErrorMessage(" The count of Discs has bad values. " + countDiscs);
+        current.setAbortAction(true);
+
+    }
+
+})(current, previous);]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2025-01-14 14:29:25&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;976312da8303d694fc9154d6feaad324&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Checking  BMW Count &lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_976312da8303d694fc9154d6feaad324&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2025-01-16 15:51:43&lt;/sys_updated_on&gt;
+        &lt;template/&gt;
+        &lt;when&gt;before&lt;/when&gt;
+    &lt;/sys_script&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=976312da8303d694fc9154d6feaad324"/&gt;
+    &lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;
+        &lt;id&gt;976312da8303d694fc9154d6feaad324&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2025-01-14 14:29:25&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a31616da8303d694fc9154d6feaad33f&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2025-01-14 14:29:25&lt;/sys_updated_on&gt;
+        &lt;table&gt;sys_script&lt;/table&gt;
+        &lt;use_es_latest&gt;true&lt;/use_es_latest&gt;
+    &lt;/sys_es_latest_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>553415233</payload_hash>
+        <record_name>Checking  BMW Count </record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:50</sys_created_on>
+        <sys_id>7434ae4283eb1214fc9154d6feaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e17072140000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:50</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>3034ae4269eb1214ed62ff2b39705248</update_guid>
+        <update_guid_history>3034ae4269eb1214ed62ff2b39705248:0,4053e68ed2ab121420a4a27aadddeec0:478714985,fb18ecfca96b9e5013c633338fd75644:0,c056607c0a6b9e50248607f79e4e494d:478714985,7436283c0d6b9e50f3c738c98849f54e:0,5a02777ba71bda100c7ab64008e3e3a7:478714985,9270373fa8d7da10787730d945bdb899:0,84a1185503dbde9078f2eec9cd1cc61f:478714985,a201141139dbde90786137979297d8b0:0,7c709899cd9bde90e099d6ab3d2b7d46:478714985,7c2cf4433bc3d618763f2d4f0c7b52c6:-316748963,f0769ade9043d6948dfc4474bcd247bb:506117597,6716d6de4d43d694def10fc231d60abe:-499797369</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>92146a6b64474dca9ad9109156b582e1</sys_id>
+        <sys_metadata>976312da8303d694fc9154d6feaad324</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Checking  BMW Count </sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">09b864c9838712d0fc9154d6feaad324</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_976312da8303d694fc9154d6feaad324</sys_update_name>
+        <sys_update_version display_value="sys_script_976312da8303d694fc9154d6feaad324">7434ae4283eb1214fc9154d6feaad348</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

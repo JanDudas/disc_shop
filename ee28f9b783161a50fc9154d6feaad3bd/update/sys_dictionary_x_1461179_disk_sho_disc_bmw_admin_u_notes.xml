@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="u_modell" table="x_1461179_disk_sho_disc">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="u_notes" table="x_1461179_disk_sho_disc_bmw_admin">
         <active>true</active>
         <array>false</array>
         <attributes/>
@@ -10,13 +10,13 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice>1</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Modell</column_label>
+        <column_label>Work notes</column_label>
         <comments/>
         <create_roles/>
-        <default_value>0</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -26,16 +26,16 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>u_modell</element>
+        <element>u_notes</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Integer">integer</internal_type>
-        <mandatory>true</mandatory>
-        <max_length>40</max_length>
-        <name>x_1461179_disk_sho_disc</name>
+        <internal_type display_value="">journal_input</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <name>x_1461179_disk_sho_disc_bmw_admin</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -51,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-12-16 08:14:03</sys_created_on>
-        <sys_name>Modell</sys_name>
+        <sys_created_on>2025-02-09 23:59:15</sys_created_on>
+        <sys_name>Work notes</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
-        <sys_update_name>sys_dictionary_x_1461179_disk_sho_disc_u_modell</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1461179_disk_sho_disc_bmw_admin_u_notes</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-10 07:46:10</sys_updated_on>
+        <sys_updated_on>2025-02-09 23:59:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

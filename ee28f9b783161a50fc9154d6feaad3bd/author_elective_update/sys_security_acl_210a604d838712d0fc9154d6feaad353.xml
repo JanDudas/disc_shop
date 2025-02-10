@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_1461179_disk_sho_disc_bmw</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1461179_disk_sho_disc_bmw</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 09:24:44</sys_created_on>
+        <sys_id>210a604d838712d0fc9154d6feaad353</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1461179_disk_sho_disc_bmw</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_security_acl_210a604d838712d0fc9154d6feaad353</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-10 09:24:44</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_security_acl_210a604d838712d0fc9154d6feaad353</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description>Default access control on x_1461179_disk_sho_disc_bmw</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>x_1461179_disk_sho_disc_bmw</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 09:24:44</sys_created_on>
+        <sys_id>210a604d838712d0fc9154d6feaad353</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1461179_disk_sho_disc_bmw</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_security_acl_210a604d838712d0fc9154d6feaad353</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-10 09:24:44</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>]]></payload>
+        <payload_hash>1611439655</payload_hash>
+        <record_name>x_1461179_disk_sho_disc_bmw</record_name>
+        <reverted_from/>
+        <source>bab32e0283eb1214fc9154d6feaad3a0</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:21:54</sys_created_on>
+        <sys_id>e8c3ee0283eb1214fc9154d6feaad30e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e16eacb70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:21:54</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>a4c3ee026beb1214bdf86c3dca175b0e</update_guid>
+        <update_guid_history>a4c3ee026beb1214bdf86c3dca175b0e:0,e283e2025beb1214289068c5d9df5162:1572537117,4536283c7b6b9e50d324e1d1b9603bd4:0,3be4f3bb855bda10d893050f9f50f8d7:1572537117,4f733f77305bda105a1b3439aae2f1e1:0,1892f3bfe31bda104e0975ee8a7da68b:1572537117,de52373f6f1bda1051977aa42598f6e2:0,13f13f3bc31bda10af9ba51e28f9c16d:1572537117,2e70773f3bd7da101dee0309b9f3e66d:0,f1d39cd50d1fde90fa690551ac74ec6c:1572537117,02f094dd099bde9026bedde4cc3e8042:0,a160dc598c9bde90f92da30d1d240b35:1572537117,b5c73f457a8b56d0d6b3757803fab03b:0,5a97fbc1778b56d029a6da039db9c654:1572537117,41b673c9f84b56d05effa77e51428d93:0,03a4ffc5f90b56d0b517e013d5c02684:1572537117,a10a604d4d8712d043e6fafa56f7d055:-1126209367</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:18:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>ce5af104316b46379d890e167370c389</sys_id>
+        <sys_metadata>210a604d838712d0fc9154d6feaad353</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1461179_disk_sho_disc_bmw</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">d7b32e0283eb1214fc9154d6feaad3c5</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_security_acl_210a604d838712d0fc9154d6feaad353</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_210a604d838712d0fc9154d6feaad353">e8c3ee0283eb1214fc9154d6feaad30e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:18:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

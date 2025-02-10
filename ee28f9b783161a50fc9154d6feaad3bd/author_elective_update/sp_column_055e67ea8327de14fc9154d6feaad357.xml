@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <semantic_tag/>
+        <size>12</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">c15e67ea8327de14fc9154d6feaad354</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-09 12:04:40</sys_created_on>
+        <sys_id>055e67ea8327de14fc9154d6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_column_055e67ea8327de14fc9154d6feaad357</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-09 12:04:40</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sp_column_055e67ea8327de14fc9154d6feaad357</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><semantic_tag/><size>12</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">c15e67ea8327de14fc9154d6feaad354</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-09 12:04:40</sys_created_on><sys_id>055e67ea8327de14fc9154d6feaad357</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package><sys_policy/><sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope><sys_update_name>sp_column_055e67ea8327de14fc9154d6feaad357</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-09 12:04:40</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>1875736103</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>78aa7677837e9250fc9154d6feaad36e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-09 12:04:40</sys_created_on>
+        <sys_id>4d5e67ea8327de14fc9154d6feaad359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ea98f7840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-09 12:04:40</sys_updated_on>
+        <type>Column</type>
+        <update_guid>415e67ea0527de147f67b0d3c293d459</update_guid>
+        <update_guid_history>415e67ea0527de147f67b0d3c293d459:1875736103</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">4e0c787a83a35254fc9154d6feaad363</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-09 17:44:10</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>0750327b5f7945c885115157c8e8dec9</sys_id>
+        <sys_metadata>055e67ea8327de14fc9154d6feaad357</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sp_column_055e67ea8327de14fc9154d6feaad357</sys_update_name>
+        <sys_update_version display_value="sp_column_055e67ea8327de14fc9154d6feaad357">4d5e67ea8327de14fc9154d6feaad359</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-09 17:44:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Set the following values on the form:
+Model = 1 (2019 - 2024)
+and Performance = 2.3 TDi (80 kW)
+and Count = 20
+and Price of 1 pcs = 20</description>
+        <display_name>Set Field Values</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <step_config display_value="Set Field Values">fcae4a935332120028bc29cac2dc340e</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>107f6447834b9618fc9154d6feaad3f4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Set Field Values</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_atf_step_107f6447834b9618fc9154d6feaad3f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:19:54</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <test display_value="Disc Normal Count Admin UI Test">633e6c0f83879618fc9154d6feaad30b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=107f6447834b9618fc9154d6feaad3f4"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>107f6447834b9618fc9154d6feaad3f4</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>2f403c47834b9618fc9154d6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:00:02</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">946f3c1a0f23330072e6452bc4767eda</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>107f6447834b9618fc9154d6feaad3f4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>a3403c47834b9618fc9154d6feaad358</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:19:54</sys_updated_on>
+        <value>u_modell=31^u_performance=3^u_count=20^u_price=4^EQ</value>
+        <variable display_value="Field values">b3dba2465320220002c6435723dc34f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>107f6447834b9618fc9154d6feaad3f4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>ef403c47834b9618fc9154d6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:00:02</sys_updated_on>
+        <value>x_1461179_disk_sho_disc_bmw</value>
+        <variable display_value="Table">424ca6465320220002c6435723dc34b5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_atf_input_variable_fcae4a935332120028bc29cac2dc340e^id=107f6447834b9618fc9154d6feaad3f4"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_atf_step_107f6447834b9618fc9154d6feaad3f4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Set the following values on the form:
+Model = 1 (2019 - 2024)
+and Performance = 2.3 TDi (80 kW)
+and Count = 20
+and Price of 1 pcs = 20</description>
+        <display_name>Set Field Values</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>3</order>
+        <step_config display_value="Set Field Values">fcae4a935332120028bc29cac2dc340e</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>107f6447834b9618fc9154d6feaad3f4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Set Field Values</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_atf_step_107f6447834b9618fc9154d6feaad3f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:19:54</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <test display_value="Disc Normal Count Admin UI Test">633e6c0f83879618fc9154d6feaad30b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=107f6447834b9618fc9154d6feaad3f4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>107f6447834b9618fc9154d6feaad3f4</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>2f403c47834b9618fc9154d6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:00:02</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">946f3c1a0f23330072e6452bc4767eda</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>107f6447834b9618fc9154d6feaad3f4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>a3403c47834b9618fc9154d6feaad358</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:19:54</sys_updated_on>
+        <value>u_modell=31^u_performance=3^u_count=20^u_price=4^EQ</value>
+        <variable display_value="Field values">b3dba2465320220002c6435723dc34f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>107f6447834b9618fc9154d6feaad3f4</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 15:00:02</sys_created_on>
+        <sys_id>ef403c47834b9618fc9154d6feaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 15:00:02</sys_updated_on>
+        <value>x_1461179_disk_sho_disc_bmw</value>
+        <variable display_value="Table">424ca6465320220002c6435723dc34b5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_fcae4a935332120028bc29cac2dc340e^id=107f6447834b9618fc9154d6feaad3f4"/>
+</record_update>]]></payload>
+        <payload_hash>-1300467423</payload_hash>
+        <record_name>Set Field Values</record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:49</sys_created_on>
+        <sys_id>20346e4283eb1214fc9154d6feaad39c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e1706d170000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:49</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>e8346e4285eb1214b0dc69d61807e99b</update_guid>
+        <update_guid_history>e8346e4285eb1214b0dc69d61807e99b:0,15436e4e78ab12144b255181c5bcd0c0:1730695629,1b18acfc246b9e50dd6f3098f46eefc3:0,8246ac3c616b9e50ae823f0cec0a33ba:1730695629,5836e43c396b9e50c6fd93c5d67e9a73:0,b9f17b3ba81bda101bbf03350826d911:1730695629,7570b33f5fd7da10a454d8067c875282:0,4e915055b4dbde90dba8144d420833d4:1730695629,9a01d011a2dbde90ecb9eda27293356c:0,9b505859929bde90691d3bf667510922:1730695629,fad4bc4fa44f961815c7de7954d6a6c9:1882298083,c934f407564f961889d69103dbc71149:-1567666646,781370077a0f961860cd8119b846c039:2023750913,63403c479f4b9618e02a5e60160f105a:1588941746</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:18:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>223901889e694598863ba6895b8df604</sys_id>
+        <sys_metadata>107f6447834b9618fc9154d6feaad3f4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Field Values</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_atf_step_107f6447834b9618fc9154d6feaad3f4</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_107f6447834b9618fc9154d6feaad3f4">20346e4283eb1214fc9154d6feaad39c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:18:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

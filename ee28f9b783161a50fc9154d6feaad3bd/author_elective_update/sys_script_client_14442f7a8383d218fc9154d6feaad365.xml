@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_count</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name> BMW Discs Count  Admin </name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+    var priceAllPieces = g_form.getValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    var five = 5;
+    var priceOfOneValue = g_form.getIntValue('u_price');
+    var priceOfOnelabel = priceOfOneValue * five;
+    var value = priceOfOnelabel * newValue;
+
+    g_form.setValue('u_priceallpcs', value);
+
+
+    if (isLoading && !g_form.isNewRecord()) {
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 09:41:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>14442f7a8383d218fc9154d6feaad365</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name> BMW Discs Count  Admin </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_14442f7a8383d218fc9154d6feaad365</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:27:47</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_client_14442f7a8383d218fc9154d6feaad365</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;
+    &lt;sys_script_client action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;applies_extended&gt;false&lt;/applies_extended&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;field&gt;u_count&lt;/field&gt;
+        &lt;global&gt;true&lt;/global&gt;
+        &lt;isolate_script&gt;true&lt;/isolate_script&gt;
+        &lt;messages/&gt;
+        &lt;name&gt; BMW Discs Count  Admin &lt;/name&gt;
+        &lt;order/&gt;
+        &lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+    var priceAllPieces = g_form.getValue('u_priceallpcs');
+    g_form.clearOptions('u_priceallpcs');
+
+    var five = 5;
+    var priceOfOneValue = g_form.getIntValue('u_price');
+    var priceOfOnelabel = priceOfOneValue * five;
+    var value = priceOfOnelabel * newValue;
+
+    g_form.setValue('u_priceallpcs', value);
+
+
+    if (isLoading &amp;&amp; !g_form.isNewRecord()) {
+        g_form.setValue('u_priceallpcs', priceAllPieces);
+    }
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2025-01-16 09:41:32&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;14442f7a8383d218fc9154d6feaad365&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt; BMW Discs Count  Admin &lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_client_14442f7a8383d218fc9154d6feaad365&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2025-01-16 14:27:47&lt;/sys_updated_on&gt;
+        &lt;table&gt;x_1461179_disk_sho_disc_bmw&lt;/table&gt;
+        &lt;type&gt;onChange&lt;/type&gt;
+        &lt;ui_type&gt;0&lt;/ui_type&gt;
+        &lt;view/&gt;
+    &lt;/sys_script_client&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1105416403</payload_hash>
+        <record_name> BMW Discs Count  Admin </record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:50</sys_created_on>
+        <sys_id>b034ae4283eb1214fc9154d6feaad34b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e17072360000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:50</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>7c34ae4275eb121464d2e9bcef1a0c4a</update_guid>
+        <update_guid_history>7c34ae4275eb121464d2e9bcef1a0c4a:0,9143ae4ec0ab12146376d2e77e9f9612:-1003865893,b718ecfcb16b9e50ddc74bfdacb7f047:0,5246ac3c6b6b9e5005055fbf163f8ee5:-1003865893,7836283c456b9e5058c40fbf18d0f751:0,c6f17b3b191bda105e359b307833aba3:-1003865893,9a70373ffdd7da108d57a4db993a5fb5:0,c6919055b9dbde901a81012b41f58258:-1003865893,2a01141128dbde908b12cfb20d253fb3:0,a35098593c9bde908033bcac6d28101c:-1003865893,13e8e40344079618da1ebdcfc2bae1b7:-1571376561,fee9273ef7c7d218c7835f90e98adc51:-1197082801,4e6767be5047d218950b04d72cafb26f:1931147983</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>06624f8cfcb14b4081c02f34bfd35b10</sys_id>
+        <sys_metadata>14442f7a8383d218fc9154d6feaad365</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name> BMW Discs Count  Admin </sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">09b864c9838712d0fc9154d6feaad324</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_client_14442f7a8383d218fc9154d6feaad365</sys_update_name>
+        <sys_update_version display_value="sys_script_client_14442f7a8383d218fc9154d6feaad365">b034ae4283eb1214fc9154d6feaad34b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

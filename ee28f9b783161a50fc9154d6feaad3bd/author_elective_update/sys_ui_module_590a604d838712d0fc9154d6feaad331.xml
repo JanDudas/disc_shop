@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="disc_BMW">dd0a604d838712d0fc9154d6feaad32d</application>
+        <filter/>
+        <name>disc_BMW_All_Mobile</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1461179_disk_sho.disc_bmw_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 09:24:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>590a604d838712d0fc9154d6feaad331</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>disc_BMW_All_Mobile</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_ui_module_590a604d838712d0fc9154d6feaad331</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-10 11:07:15</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_ui_module_590a604d838712d0fc9154d6feaad331</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="disc_BMW">dd0a604d838712d0fc9154d6feaad32d</application>
+        <filter/>
+        <name>disc_BMW_All_Mobile</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1461179_disk_sho.disc_bmw_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 09:24:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>590a604d838712d0fc9154d6feaad331</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>disc_BMW_All_Mobile</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_ui_module_590a604d838712d0fc9154d6feaad331</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-10 11:07:15</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>]]></payload>
+        <payload_hash>-1563499754</payload_hash>
+        <record_name>disc_BMW_All_Mobile</record_name>
+        <reverted_from/>
+        <source>bab32e0283eb1214fc9154d6feaad3a0</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:21:54</sys_created_on>
+        <sys_id>20c3ee0283eb1214fc9154d6feaad365</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e16eae5f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:21:54</sys_updated_on>
+        <type>Module</type>
+        <update_guid>e8c3ee02a1eb1214e364e9199c701a64</update_guid>
+        <update_guid_history>e8c3ee02a1eb1214e364e9199c701a64:0,0f83260244eb12141a8480dd239e8734:931232594,9d36683c246b9e50c730eca232048068:0,0cf437bb9a5bda1083c7cc6273d1efd2:931232594,03737f77a65bda10f4975e22c029cea3:0,f89237bfff1bda10bc3ba5a074c81998:931232594,6e52773f841bda10080676f049d5be73:0,7802337be51bda1028e1df854eba41f1:931232594,fa70b73f51d7da10659781b05ba6207f:0,ded31019931fde90f849426adf54413f:931232594,8af094dd0e9bde90553c2efec5772ec6:0,27605499bf9bde900e36acf643d9b3f9:931232594,06c73f45248b56d0e97930426b2874dc:0,26973fc1db8b56d08cd2615b8a54540d:931232594,c1b6b3c9504b56d002803873aac07274:0,5fa433098c0b56d08ae6d8764bf74f1d:931232594,1b714d098ccf12d02b4f98349fc61149:-1196764594,dfda3805ae0f12d0347950ab8a00b94a:1676120538,150a604d938712d0a4343859ad707434:1951601038</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:18:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>71292e88a5254a04bd40edcd6ce63859</sys_id>
+        <sys_metadata>590a604d838712d0fc9154d6feaad331</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>disc_BMW_All_Mobile</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_ui_module_590a604d838712d0fc9154d6feaad331</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_590a604d838712d0fc9154d6feaad331">20c3ee0283eb1214fc9154d6feaad365</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:18:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

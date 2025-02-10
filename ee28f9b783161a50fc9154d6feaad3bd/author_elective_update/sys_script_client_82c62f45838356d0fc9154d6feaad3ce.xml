@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_modell</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>BMW Disc Model Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    var performance = g_form.getValue('u_performance');
+    g_form.clearOptions('u_performance');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_performance', 0, 'Select Model of the Car');
+            break;
+        case (newValue == 31):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+
+        case (newValue == 32):
+
+            g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
+            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
+            g_form.addOption('u_performance', 6, 'JDM (95 kW)');
+            break;
+        case (newValue == 33):
+
+            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
+            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+            g_form.addOption('u_performance', 9, '2.6 JTVS (135 kW)');
+            break;
+
+        case (newValue == 41):
+
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+
+        case (newValue == 42):
+
+            g_form.addOption('u_performance', 13, '1.4 TB ( 122 kW)');
+            g_form.addOption('u_performance', 14, '1.6 d (89 kW)');
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            break;
+
+        case (newValue == 43):
+
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
+            break;
+
+        default:
+            alert("none disc model");
+            break;
+    }
+
+    if (isLoading && !g_form.isNewRecord()) {
+        // performance = g_form.getValue('u_performance');
+        // control, oldValue,  
+        g_form.setValue('u_performance', performance);
+    }
+
+
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 23:36:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>82c62f45838356d0fc9154d6feaad3ce</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>BMW Disc Model Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_script_client_82c62f45838356d0fc9154d6feaad3ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 10:02:27</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_script_client_82c62f45838356d0fc9154d6feaad3ce</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;
+    &lt;sys_script_client action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;applies_extended&gt;false&lt;/applies_extended&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;field&gt;u_modell&lt;/field&gt;
+        &lt;global&gt;true&lt;/global&gt;
+        &lt;isolate_script&gt;true&lt;/isolate_script&gt;
+        &lt;messages/&gt;
+        &lt;name&gt;BMW Disc Model Options&lt;/name&gt;
+        &lt;order/&gt;
+        &lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    var performance = g_form.getValue('u_performance');
+    g_form.clearOptions('u_performance');
+
+    switch (true) {
+        case (newValue == 0):
+            g_form.addOption('u_performance', 0, 'Select Model of the Car');
+            break;
+        case (newValue == 31):
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+
+        case (newValue == 32):
+
+            g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
+            g_form.addOption('u_performance', 5, 'JTDM ( 130 kW )');
+            g_form.addOption('u_performance', 6, 'JDM (95 kW)');
+            break;
+        case (newValue == 33):
+
+            g_form.addOption('u_performance', 7, '2JTS ( 122 kW )');
+            g_form.addOption('u_performance', 8, '2.4 JTD ( 130 kW)');
+            g_form.addOption('u_performance', 9, '2.6 JTVS (135 kW)');
+            break;
+
+        case (newValue == 41):
+
+            g_form.addOption('u_performance', 10, '2.8 V6 ( 100 kW )');
+            g_form.addOption('u_performance', 11, '1.8  MPI (103 kW )');
+            g_form.addOption('u_performance', 12, '1.9 JTS ( 118 kW)');
+
+            // (method) g_form.addOption(fieldName: string, choiceValue: string, choiceLabel: string): void
+            break;
+
+        case (newValue == 42):
+
+            g_form.addOption('u_performance', 13, '1.4 TB ( 122 kW)');
+            g_form.addOption('u_performance', 14, '1.6 d (89 kW)');
+            g_form.addOption('u_performance', 1, '1.6  (56 kW)');
+            break;
+
+        case (newValue == 43):
+
+            g_form.addOption('u_performance', 2, '1.9 TDi ( 62 kW )');
+            g_form.addOption('u_performance', 3, '2.3 TDi (80 kW)');
+            g_form.addOption('u_performance', 4, '1.6 JTDM ( 110 kW )');
+            break;
+
+        default:
+            alert("none disc model");
+            break;
+    }
+
+    if (isLoading &amp;&amp; !g_form.isNewRecord()) {
+        // performance = g_form.getValue('u_performance');
+        // control, oldValue,  
+        g_form.setValue('u_performance', performance);
+    }
+
+
+
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2025-01-10 23:36:37&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;82c62f45838356d0fc9154d6feaad3ce&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;BMW Disc Model Options&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Disc shop" source="x_1461179_disk_sho"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Disc shop"&gt;ee28f9b783161a50fc9154d6feaad3bd&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_client_82c62f45838356d0fc9154d6feaad3ce&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2025-01-16 10:02:27&lt;/sys_updated_on&gt;
+        &lt;table&gt;x_1461179_disk_sho_disc_bmw&lt;/table&gt;
+        &lt;type&gt;onChange&lt;/type&gt;
+        &lt;ui_type&gt;10&lt;/ui_type&gt;
+        &lt;view/&gt;
+    &lt;/sys_script_client&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1964305253</payload_hash>
+        <record_name>BMW Disc Model Options</record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:50</sys_created_on>
+        <sys_id>b434ae4283eb1214fc9154d6feaad350</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e17072780000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:50</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>7034ae4296eb1214ccc30f84e49c9350</update_guid>
+        <update_guid_history>7034ae4296eb1214ccc30f84e49c9350:0,dcc3ae0283eb12145e84b31ad29e08f3:0,3f83660297eb1214419bb2fba401f8b5:264539841,525322ce5aab121413b6217a60cce3ac:0,7318ecfc996b9e50b927c036beecc64c:0,d956a07c786b9e5029ec0159815275ef:0,7836283ced6b9e508a29598cc09dac6e:0,b0f4f7bb655bda10d95a014130d00069:264539841,32733f77b45bda10c086f2e2f945dcb8:0,a192f7bf371bda10cf6f909b01f3c592:264539841,9652373fd41bda10e69c16b897320c0a:0,0602377b681bda106f4ab6931d318387:-618325439,ea70373f0dd7da10cde9bad878b867ba:0,d3d3d019bc1fde90272a7725a38ac189:264539841,1da11c5533dbde90e67ab1d84b0b4256:0,66011411dcdbde90685914d5801e73ba:0,25f054dddf9bde903a790dee5a2fb851:0,64705899fc9bde90c0e526814300d060:-618325439,603ceffa004bd2184895b0bd6577c7d3:1752502453,736c64a50b075ed08799658458467008:-1997490123,31c73f45868b56d0913e86e83ea3b915:0,07977fc1c68b56d0a5f7d82676659cd6:1588535160,ecb673c9e54b56d0be65497da0fe5853:0,80b4b309ee0b56d0125116b9413e457f:1588535160,1423b7857ec756d0d76d9c8ff063bbd0:-2085035388,88d2b78567c756d082b8a06e85abcec9:1924159368,bf7233c9e08756d048c6d633cb6ffe3d:-2128737748,01d13b093c4756d0a713f415f270f7b8:-303797557,5991ff0100c756d0d7fb0c70b7d2b42c:308834740,d80dab85ed4756d082a011ad57f41dc3:133377686</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>a7ab26547c364e94821d97b7f4003691</sys_id>
+        <sys_metadata>82c62f45838356d0fc9154d6feaad3ce</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BMW Disc Model Options</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent display_value="">09b864c9838712d0fc9154d6feaad324</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_script_client_82c62f45838356d0fc9154d6feaad3ce</sys_update_name>
+        <sys_update_version display_value="sys_script_client_82c62f45838356d0fc9154d6feaad3ce">b434ae4283eb1214fc9154d6feaad350</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

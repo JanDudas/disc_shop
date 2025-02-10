@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="DELETE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>disc_BMW_admin</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_1461179_disk_sho_disc_bmw</name>
+        <number_ref display_value="DISADM">aaf32396834f9a94fc9154d6feaad340</number_ref>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="disc" name="x_1461179_disk_sho_disc">7de5957483e21610fc9154d6feaad3ae</super_class>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 09:24:43</sys_created_on>
+        <sys_id>09b864c9838712d0fc9154d6feaad324</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>disc_BMW_admin</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_db_object_09b864c9838712d0fc9154d6feaad324</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 20:09:35</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_1461179_disk_sho.disc_bmw_user" name="x_1461179_disk_sho.disc_bmw_user">5d0ae40d838712d0fc9154d6feaad393</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_db_object_09b864c9838712d0fc9154d6feaad324</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <is_extendable>false</is_extendable>
+        <label>disc_BMW_admin</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_1461179_disk_sho_disc_bmw</name>
+        <number_ref display_value="DISADM">aaf32396834f9a94fc9154d6feaad340</number_ref>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="disc" name="x_1461179_disk_sho_disc">7de5957483e21610fc9154d6feaad3ae</super_class>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-10 09:24:43</sys_created_on>
+        <sys_id>09b864c9838712d0fc9154d6feaad324</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>disc_BMW_admin</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_db_object_09b864c9838712d0fc9154d6feaad324</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-14 20:09:35</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_1461179_disk_sho.disc_bmw_user" name="x_1461179_disk_sho.disc_bmw_user">5d0ae40d838712d0fc9154d6feaad393</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>]]></payload>
+        <payload_hash>17077041</payload_hash>
+        <record_name>disc_BMW_admin</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:42</sys_created_on>
+        <sys_id>3a24aa4283eb1214fc9154d6feaad3f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e170545d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:42</sys_updated_on>
+        <type>Table</type>
+        <update_guid>f624aa424feb1214d300857110fd07f3</update_guid>
+        <update_guid_history>b2936a0254eb12144223a2c32984b164:1067165883,0b83260258eb1214ff016c2d5e034968:0,14536a8e31ab1214c85439bb58bb955c:0,0c56607cd76b9e508774a78b9e01fc7b:0,cc05fbbbed5bda10d1280cfccc2d57a1:1067165883,d8f477bbdc5bda10e2cf2928335eb965:0,b8a233ff8b1bda1036745b7ced88097a:1067165883,309277bf771bda10237ee7fe9895dc63:0,e512ff7be21bda103460dafbe69f58a8:-827579045,6602b77b461bda108c88fd8ad8276d55:0,0902737b1c1bda100fcb3b31afaf6d50:0,cbe39c19971fde9018325f41c0e12120:1067165883,e2d31019581fde9027f325f000efebf2:0,4ca11855e1dbde908361fd6e865be625:0,1180d4d90c9bde9079b0cfcbeb480211:-827579045,9970d8995e9bde9070155fe0f12b214b:0,3f609499c99bde901cf8e1ca5e5589a4:0,eaf3eb9e6f8f9a94eda023a99a31ed50:1397556323,247d1316974b9a94a662bf22ae562c49:899617742,95a77705958b56d0f8a8b1700ec267a9:1067165883,e6973fc1e58b56d0627297e4c8a6fc7e:0,6eb4fb09c60b56d09a56f9ec1b787f3d:1067165883,1ba43309bd0b56d0d182e86a58f02e90:0,7d0a604dbd8712d07d6ddf23250c4983:577788206</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:18:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_object">sys_db_object</sys_db_object>
+        <sys_id>09545b057ea548e89188b74e855759c1</sys_id>
+        <sys_metadata>09b864c9838712d0fc9154d6feaad324</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>disc_BMW_admin</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_db_object_09b864c9838712d0fc9154d6feaad324</sys_update_name>
+        <sys_update_version display_value="sys_db_object_09b864c9838712d0fc9154d6feaad324">3a24aa4283eb1214fc9154d6feaad3f3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:18:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

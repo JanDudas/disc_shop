@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Open a new 'disc_BMW_admin' form</description>
+        <display_name>Open a New Form</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Open a New Form">05317cd10b10220050192f15d6673af8</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>11fe64cf830b9618fc9154d6feaad32f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open a New Form</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_atf_step_11fe64cf830b9618fc9154d6feaad32f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <test display_value="Disc Normal Count Admin UI Test">633e6c0f83879618fc9154d6feaad30b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=11fe64cf830b9618fc9154d6feaad32f"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>355f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">6f2a59a4e7133300b5646ea8c2f6a975</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>7d5f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value>x_1461179_disk_sho_disc_bmw</value>
+        <variable display_value="Table">bb84ed825320220002c6435723dc3400</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>b95f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value>record</value>
+        <variable display_value="Record path">3a662f60a3023110571967d1361e6134</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>f55f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value/>
+        <variable display_value="View">27d4e1c25320220002c6435723dc3486</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_atf_input_variable_05317cd10b10220050192f15d6673af8^id=11fe64cf830b9618fc9154d6feaad32f"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sys_atf_step_11fe64cf830b9618fc9154d6feaad32f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Open a new 'disc_BMW_admin' form</description>
+        <display_name>Open a New Form</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <step_config display_value="Open a New Form">05317cd10b10220050192f15d6673af8</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>11fe64cf830b9618fc9154d6feaad32f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open a New Form</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sys_atf_step_11fe64cf830b9618fc9154d6feaad32f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <table>x_1461179_disk_sho_disc_bmw</table>
+        <test display_value="Disc Normal Count Admin UI Test">633e6c0f83879618fc9154d6feaad30b</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=11fe64cf830b9618fc9154d6feaad32f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>355f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">6f2a59a4e7133300b5646ea8c2f6a975</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>7d5f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value>x_1461179_disk_sho_disc_bmw</value>
+        <variable display_value="Table">bb84ed825320220002c6435723dc3400</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>b95f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value>record</value>
+        <variable display_value="Record path">3a662f60a3023110571967d1361e6134</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>11fe64cf830b9618fc9154d6feaad32f</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-16 14:55:48</sys_created_on>
+        <sys_id>f55f2807834b9618fc9154d6feaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-16 14:55:48</sys_updated_on>
+        <value/>
+        <variable display_value="View">27d4e1c25320220002c6435723dc3486</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_05317cd10b10220050192f15d6673af8^id=11fe64cf830b9618fc9154d6feaad32f"/>
+</record_update>]]></payload>
+        <payload_hash>277031820</payload_hash>
+        <record_name>Open a New Form</record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:49</sys_created_on>
+        <sys_id>a4346e4283eb1214fc9154d6feaad3a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e1706d4e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:49</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>60346e4280eb1214251bc1fbb5d700a0</update_guid>
+        <update_guid_history>60346e4280eb1214251bc1fbb5d700a0:0,9943ae4e18ab1214a64d1c636f388f0b:1066925533,db18acfc156b9e501917b666baa25bc7:0,0246ac3c146b9e50f2f1a80162db06da:1066925533,1036e43c136b9e50859dbaebfdee3284:0,4ef17b3bd51bda106ad632e75df7159c:1066925533,0a70b33f8ad7da10893bfa41652d0dac:0,4691905503dbde902c4b19a18136312c:1066925533,1201d01127dbde90446a9ed830d19872:0,af5058593b9bde905497ed184262e1b1:1066925533,795f2807214b96187f48d7346789e476:-964388556</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-10 07:18:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>915a6fb539c041feb95f4c4f0e85cf59</sys_id>
+        <sys_metadata>11fe64cf830b9618fc9154d6feaad32f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open a New Form</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sys_atf_step_11fe64cf830b9618fc9154d6feaad32f</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_11fe64cf830b9618fc9154d6feaad32f">a4346e4283eb1214fc9154d6feaad3a0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:18:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

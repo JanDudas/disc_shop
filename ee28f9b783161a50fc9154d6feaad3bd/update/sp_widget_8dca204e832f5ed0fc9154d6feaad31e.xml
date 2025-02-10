@@ -4,14 +4,46 @@
         <client_script><![CDATA[function($rootScope,$scope,spModal,spUtil) {	
 	var c = this;
 
+	const button = document.querySelector("input");
+	const paragraph = document.querySelector("p");
 
-	c.displayAllDiscs = function(){
-		c.server.get({
-			action:'displayAll',			 
-		}).then(function(r){		 
+	// button.addEventListener("click", c.updateButton);
+	//             <input type="button" value="display All" name="display All" ng-click="c.updateButton()"> 
+	// ng-click="c.updateButton()"
 
-		});
+	c.display = false;	
+	c.updateButton = function() {
+		if (button.value === "Display All Discs") {
+			button.value = "Hide All Discs";
+			//paragraph.textContent = "The machine has started!";
+			c.display = true;
+		} else {
+			button.value = "Display All Discs";
+			//	paragraph.textContent = "The machine is stopped.";
+			c.display = false;
+		}
 	}
+
+	c.index = 0;
+	c.selectItem = function(idx) {
+		var id  = c.data.bmwDiscs[idx].number;
+		console.log('Dear JD, ID idx je: ' + idx);		
+		
+		console.log('Dear JD, ID id je: ' + id);
+		
+	 	$rootScope.discID = id;
+		// $rootScope.discID = index;
+		console.log('Dear JD, ID $rootScope.discID: ' + $rootScope.discID);
+		 
+		$rootScope.$emit('selectDisc', 	id);
+	}
+
+
+
+
+
+
+	//}
 
 
 }]]></client_script>
@@ -42,9 +74,10 @@
 	/* e.g., data.table = $sp.getValue('table'); */
 
 	data.bmwDiscs = [];
-	var bmwDiscsGR = new GlideRecord('x_1461179_disk_sho_disc_bmw');
+	var bmwDiscsGR = new GlideRecord('x_1461179_disk_sho_disc_bmw_admin');
+	/// vloz x_1461179_disk_sho_disc_bmw_admin bolo
 	bmwDiscsGR.orderByDesc('sys_created_on');	
-	bmwDiscsGR.query();
+	bmwDiscsGR.query();	 
 
 	while(bmwDiscsGR.next()){
 		var discObj = {};
@@ -53,7 +86,9 @@
 	}
 
 	if(input){
+		var allDiscsGR = new GlideRecord('x_1461179_disk_sho_disc_bmw_admin');
 		if(input.action =='displayAll'){
+			data.scVars =	$sp.getRecordVariablesArray(allDiscsGR); 
 
 		}
 	}
@@ -63,14 +98,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-07 08:33:17</sys_created_on>
         <sys_id>8dca204e832f5ed0fc9154d6feaad31e</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>212</sys_mod_count>
         <sys_name>bmw discs</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sp_widget_8dca204e832f5ed0fc9154d6feaad31e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-08 07:48:47</sys_updated_on>
+        <sys_updated_on>2025-02-10 07:12:08</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading clearfix">
     <meta property="og:url" content="https://dev203221.service-now.com/dspJD/disky_plech?id=bmw_discs">      
@@ -132,18 +167,23 @@
           <article> 
             <h3 class="no-border">
               Plechove BMW disky
-            </h3>             
+            </h3>       
 
 
-            <p>
-              Discs list widget
-            </p>
-            
-          <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">
-            
-            <div class="list-group">
-              <a class="list-group-item" ng-repeat="disc in data.bmwDiscs">
-                <h4 class="list-group-item-heading">
+            <!-- ng-disabled="submitted" ng-click="c.displayAllDiscs()" ng-change="c.updateNote('title')"-->
+
+            <form>
+              <input type="button" value="Display All Discs" ng-click="c.updateButton()"/>
+            </form>
+            <!--p>The machine is stopped.</p!-->
+
+            <!--input type="button" value="Start machine" / </form> <p>The machine is stopped.</p> !-->                   
+
+            <div  ng-if="c.display == true" ng-disabled="submitted" class="list-group"  >
+              <p> <strong> Disc list. </strong> </p>
+             
+              <a   class="list-group-item" ng-click="c.selectItem($index)" ng-repeat="disc in data.bmwDiscs">
+                <h4  class="list-group-item-heading">
                   {{disc.u_mark}}
                 </h4>
                 <p class="list-group-item-text">
@@ -152,8 +192,16 @@
                 <p class="list-group-item-text">
                   {{disc.u_performance}}
                 </p>
+                <p class="list-group-item-text">
+                  {{disc.u_count}}
+                </p>
               </a>
-            </div>
+            </div>        
+
+
+
+
+
 
             <div id="DiskyPlech" class="filter-form main-filter">
               <form act☼on method="get" novalidate>
@@ -202,7 +250,8 @@
 
     <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
 
-    <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">    
+    <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">  
+
   </div>
 </div>
 ]]></template>

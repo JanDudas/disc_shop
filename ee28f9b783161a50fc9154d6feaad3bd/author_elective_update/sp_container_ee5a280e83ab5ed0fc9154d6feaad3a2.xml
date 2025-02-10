@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>BMW Discs - Container 1</name>
+        <order>1</order>
+        <semantic_tag/>
+        <sp_page display_value="bmw_discs">6e5a280e83ab5ed0fc9154d6feaad39e</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 08:31:28</sys_created_on>
+        <sys_id>ee5a280e83ab5ed0fc9154d6feaad3a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BMW Discs - Container 1</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_container_ee5a280e83ab5ed0fc9154d6feaad3a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 08:31:28</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</application>
+        <file_path/>
+        <instance_id>e9ec096d1bdef1107d9d2f8dee4bcb4b</instance_id>
+        <instance_name>dev203221</instance_name>
+        <name>sp_container_ee5a280e83ab5ed0fc9154d6feaad3a2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>BMW Discs - Container 1</name>
+        <order>1</order>
+        <semantic_tag/>
+        <sp_page display_value="bmw_discs">6e5a280e83ab5ed0fc9154d6feaad39e</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 08:31:28</sys_created_on>
+        <sys_id>ee5a280e83ab5ed0fc9154d6feaad3a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BMW Discs - Container 1</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_container_ee5a280e83ab5ed0fc9154d6feaad3a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 08:31:28</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>]]></payload>
+        <payload_hash>-663736738</payload_hash>
+        <record_name>BMW Discs - Container 1</record_name>
+        <reverted_from/>
+        <source>0624aa4283eb1214fc9154d6feaad357</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-07 17:23:46</sys_created_on>
+        <sys_id>7b242e4283eb1214fc9154d6feaad38a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194e17063e20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-07 17:23:46</sys_updated_on>
+        <type>Container</type>
+        <update_guid>37242e4240eb1214615953c249a9288a</update_guid>
+        <update_guid_history>37242e4240eb1214615953c249a9288a:0,db43668e6aab12145217ebee4dc3c387:-762899465,2a5a280eefab5ed02bbb722506033ba5:947802612</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="BMW Discs - Container 1">c22c3c3283e35254fc9154d6feaad3ed</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-09 17:44:42</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>3aad304fa1744a89b5d2696c55a4bc89</sys_id>
+        <sys_metadata>ee5a280e83ab5ed0fc9154d6feaad3a2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BMW Discs - Container 1</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_scope_delete display_value="">0fdb8dfa0cfa4d2c84d33507d7f9a971</sys_scope_delete>
+        <sys_update_name>sp_container_ee5a280e83ab5ed0fc9154d6feaad3a2</sys_update_name>
+        <sys_update_version display_value="sp_container_ee5a280e83ab5ed0fc9154d6feaad3a2">7b242e4283eb1214fc9154d6feaad38a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-09 17:44:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

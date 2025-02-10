@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,$rootScope,spModal,spUtil) {	
+	var c = this;
+
+console.log('Dear JD, z body disc  ID  $rootScope.discID  je: ');
+
+	// button.addEventListener("click", c.updateButton);
+	//             <input type="button" value="display All" name="display All" ng-click="c.updateButton()"> 
+	// ng-click="c.updateButton()" 
+
+	$rootScope.$on('selectDisc', function(event,data){
+			console.log('Dear JD, z body disc  ID  $rootScope.discID  je: ' + $rootScope.discID);
+		c.server.get({
+			action: 'getDisc',
+			discID: $rootScope.discID
+			 
+		}).then(function(r){
+			c.data.u_mark = r.data.u_mark;
+			c.data.u_model = r.data.u_modell;
+			c.data.u_performance = r.data.u_performance;
+			c.data.u_count = r.data.u_count;
+			c.data.u_price = r.data.u_price;
+			c.data.u_priceallpcsk = r.data.u_priceallpcsk;
+		});
+		
+	});
+
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"data": {
+		"name": "Johan",
+			"email": "johan.d@gmail.com",				 
+				"phone": "0011223344"
+	}
+}
+</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>bmw_body_disc</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>bmw body disc</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+
+
+	if(input && input.discID){
+		var oneDiscGR = new GlideRecord('x_1461179_disk_sho_disc_bmw_admin');
+		
+	// vloz	x_1461179_disk_sho_disc_bmw_admin stare x_1461179_disk_sho_disc_bmw
+		if(oneDiscGR.get(input.discID)){
+
+			console.log('Dear JD, z body disc server nput.action je: ' + input.action);
+			console.log('Dear JD, z body disc server input.discID je: ' + input.discID);
+			
+			if(input.action =='getDisc'){
+				data.discObject = {};
+				$sp.getRecordValues(data.discObject, oneDiscGR, " u_mark, u_modell, u_performance, u_count, u_price, u_priceallpcs");
+			}
+
+		}
+
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-09 11:50:04</sys_created_on>
+        <sys_id>57faebe68323de14fc9154d6feaad350</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>bmw body disc</sys_name>
+        <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
+        <sys_update_name>sp_widget_57faebe68323de14fc9154d6feaad350</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-10 07:14:40</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+
+  <div class="panel-heading clearfix">    
+    <h3 class="panel-title pull-left">
+      ${Plechove disky}
+    </h3>
+  </div>
+
+  <div class="panel-body">   
+
+    <div id="content" class="col-xs-12 col-sm-9 col-sm-9 col-md-10 col-lg-10">
+      <div class="inner-wrap">      
+
+        <article> 
+          <h3 class="no-border">
+            Plechovy BMW disk
+          </h3>    
+          <!-- ng-disabled="submitted" ng-click="c.displayAllDiscs()" ng-change="c.updateNote('title')"-->
+
+          <!--input type="button" value="Start machine" / </form> <p>The machine is stopped.</p> !-->                
+
+          <label for="disc-mark"> Znacka auta </label> 
+          <input class="form-control" id="disc-mark" ng-model="c.data.u_mark" />
+
+          <label for="disc-model"> Model auta </label> 
+          <input class="form-control" id="disc-model" ng-model="c.data.u_model" />
+
+          <label for="disc-performance"> Prevedenie auta </label> 
+          <input class="form-control" id="disc-performance" ng-model="c.data.u_performance" />
+          
+           <label for="disc-count"> Pocet diskov </label> 
+          <input class="form-control" id="disc-count" ng-model="c.data.u_count" />
+          
+           <label for="disc-price"> Cena 1 disku </label> 
+          <input class="form-control" id="disc-price" ng-model="c.data.u_price" />
+
+           <label for="disc-priceallpcsk"> Cena vsetkych diskov </label> 
+          <input class="form-control" id="disc-priceallpcsk" ng-model="c.data.u_priceallpcsk" />
+          
+          <textarea class="form-control" id="disc-u_priceallpcsk" ng-model="c.data.u_priceallpcsk" ></textarea>
+
+          <div id="DiskyPlech" class="filter-form main-filter">
+            <form act☼on method="get" novalidate>
+
+              <div class="main">
+                <div class="field znacka_auta">                   
+
+                  <label for="frm-znacka_auta"> Znacka auta </label> 
+
+                </div>
+
+                <div class="field model_auta">
+                  <label for="frm-model_auta"> Model auta </label>                    
+
+
+                </div>
+
+                <div class="field vykon_auta">
+                  <label for="frm-vykon_auta"> Vykon auta </label>                    
+
+
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!~-ng-if="c.data.phone.length != 10" <!strong style="color:red"--> 
+
+  <input type="submit" value="Submit"  name="Submit" ng-if="c.filledMandatoryFields()" ng-disabled="submitted" ng-click="c.newContact()">  
+
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

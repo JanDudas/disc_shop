@@ -13,7 +13,7 @@
         <inactive>false</inactive>
         <kb_knowledge_base/>
         <kb_knowledge_page/>
-        <login_page/>
+        <login_page display_value="login_page">b6d87661833b5e50fc9154d6feaad336</login_page>
         <logo>f9a87b73839bda10fc9154d6feaad306</logo>
         <notfound_page/>
         <quick_start_config/>
@@ -29,14 +29,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-31 23:47:02</sys_created_on>
         <sys_id>b25877ff835bda10fc9154d6feaad3b4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Disc Shop Portal</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sp_portal_b25877ff835bda10fc9154d6feaad3b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-01 08:29:35</sys_updated_on>
+        <sys_updated_on>2025-02-18 16:09:24</sys_updated_on>
         <theme display_value="Stock - High Contrast">f84873986711320023c82e08f585ef6a</theme>
         <title>Disc Shop Portal</title>
         <ts_index_group/>

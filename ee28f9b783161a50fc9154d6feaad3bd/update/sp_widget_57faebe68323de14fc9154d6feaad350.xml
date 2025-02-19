@@ -3,31 +3,134 @@
         <category>custom</category>
         <client_script><![CDATA[function($scope,$rootScope,spModal,spUtil) {	
 	var c = this;
+	c.update = false;
+	c.delete =  false;
+	//const button = document.querySelector("input");
+	//	c.updateButton = function() {
+	//	if (button.value === "Display All Discs") {
+	///	button.value = "Hide All Discs";
+	//		} else {
+	//	button.value = "Display All Discs";
+	//	paragraph.textContent = "The machine is stopped.";		 
+	//		}
+	//	}	
+	//const text = document.querySelector("select");	
 
- 
+	c.updateButton = function() {
+		if (c.delete == true){
+			c.delete = false; 			 
+		}   
 
-	// button.addEventListener("click", c.updateButton);
-	//             <input type="button" value="display All" name="display All" ng-click="c.updateButton()"> 
-	// ng-click="c.updateButton()" 
+		if (c.update == false){
+			if(!c.data.sys_id){
+				spUtil.addInfoMessage('Please select any disc record from Display All Discs');
+				return;
+			}
+			c.update = true; 
+		} else {
+			if (c.update == true){
+				c.update = false; 
+			} 
+		}
+		console.log('Dear JD, z disc c.update   c.update  je: ' + c.update);
+		console.log('Dear JD, z disc c.update   c.delete  je: ' + c.delete);
+	}
+
+
+	c.displayChangedPriceDisc = function() {	
+		console.log('Disc displayChangedPriceDisc z c.data.sys_id je  : ' + c.data.sys_id);
+		console.log('Disc displayChangedPriceDisc z c.data.newCount je  : ' + c.data.newCount);
+		console.log('Disc displayChangedPriceDisc z c.data.newPrice1 je  : ' + c.data.newPrice);	
+	}	 
+
+	c.updatePriceOrCount = function(newPriceOrCount){ //https://www.servicenow.com/community/developer-forum/how-to-get-drop-down-field-value-in-portal/m-p/2040642
+		console.log('Disc  newPrice Or Count je  : ' + newPriceOrCount);
+		console.log('Disc displayChangedPriceDisc z c.data.sys_id je  : ' + c.data.sys_id);
+		if(c.data.sys_id ==='undefined'){
+			console.log(' c.updatePrice sa nekona field1 je  : ' + newPriceOrCount + ' Update Stop !');
+			return;
+		}  else {
+			$rootScope.discID = c.data.sys_id;
+			console.log('JD  c.data.newPrice je  : ' + c.data.newPrice);
+			console.log('JD c.data.newCount je  : ' +  c.data.newCount);
+
+			c.server.get({
+				action: 'updateDisc',
+				discID: $rootScope.discID,
+				discPrice: c.data.newPrice,
+				discCount: c.data.newCount
+
+			}).then(function(r){
+				// When the promise is returned, emit the change			 
+				$rootScope.$emit('updateDisc', r.data);
+			}); 
+			c.data.newPrice ='';
+			c.data.newCount ='';
+		}
+	}
 
 	$rootScope.$on('selectDisc', function(event,data){
-			console.log('Dear JD, z body disc  ID  $rootScope.discID  je: ' + $rootScope.discID);
+		console.log('Dear JD, z body disc  ID  $rootScope.discID .$on  je: ' + $rootScope.discID);
 		c.server.get({
 			action: 'getDisc',
 			discID: $rootScope.discID
-			 
+			
 		}).then(function(r){
-			c.data.u_mark = r.data.u_mark;
-			c.data.u_model = r.data.u_modell;
-			c.data.u_performance = r.data.u_performance;
-			c.data.u_count = r.data.u_count;
-			c.data.u_price = r.data.u_price;
-			c.data.u_priceallpcsk = r.data.u_priceallpcsk;
-		});
-		
+			c.data.u_mark = r.data.discObject.u_mark;			 
+			c.data.u_modell = r.data.discObject.u_modell;			
+			c.data.u_performance = r.data.discObject.u_performance;
+			c.data.u_count = r.data.discObject.u_count;
+			c.data.u_price =  r.data.discObject.u_price;
+			c.data.u_priceallpcs = r.data.discObject.u_priceallpcs;
+			c.data.sys_id = r.data.discObject.sys_id;
+		});		  
 	});
 
+	c.deleteButton = function(){
+		if (c.update == true){
+			c.update = false; 			 
+		}   
 
+		if (c.delete == false){
+			if(!c.data.sys_id){
+				spUtil.addInfoMessage('Please select any disc record from Display All Discs');
+				return;
+			}
+			c.delete = true; 
+			spModal.confirm("Are you sure you want to delete Disc record?").then(function(confirmed){
+				if(confirmed){
+					c.deleteDisc();
+				}
+			});
+		} else {
+			if (c.delete == true){
+				c.delete = false; 
+			} 
+		}
+		console.log('Dear JD, z disc c.update   c.update  je: ' + c.update);
+		console.log('Dear JD, z disc c.update   c.delete  je: ' + c.delete);
+	}
+
+	c.deleteDisc  = function(){
+		console.log('Disc c.deleteDisc() z c.data.sys_id je  : ' + c.data.sys_id);
+
+		c.server.get({
+			action: 'deleteDisc',
+			discID: c.data.sys_id
+		}).then(function(r){
+			
+			$rootScope.$emit('deleteDisc', c.data.sys_id);
+			c.data.u_mark = '';			 
+			c.data.u_modell = '';			
+			c.data.u_performance = '';
+			c.data.u_count = '';
+			c.data.u_price = '';
+			c.data.u_priceallpcs = '';
+			c.data.sys_id = '';
+		});
+	}
+	$scope.prics = ['15','20','25','30','35','40','45','50'];
+	$scope.cnts = ["2","4","6","8","10"];
 }]]></client_script>
         <controller_as>c</controller_as>
         <css/>
@@ -53,41 +156,62 @@
         <roles/>
         <script><![CDATA[(function() {
 	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
-
-
+	/* e.g., data.table = $sp.getValue('table'); */	 
 
 	if(input && input.discID){
-		var oneDiscGR = new GlideRecord('x_1461179_disk_sho_disc_bmw_admin');
-		
-	// vloz	x_1461179_disk_sho_disc_bmw_admin stare x_1461179_disk_sho_disc_bmw
+		var oneDiscGR = new GlideRecord('x_1461179_disk_sho_disc_bmw_admin');		
+
 		if(oneDiscGR.get(input.discID)){
-
-			console.log('Dear JD, z body disc server nput.action je: ' + input.action);
-			console.log('Dear JD, z body disc server input.discID je: ' + input.discID);
-			
-			if(input.action =='getDisc'){
+			if(input.action =='getDisc'){				 
 				data.discObject = {};
-				$sp.getRecordValues(data.discObject, oneDiscGR, " u_mark, u_modell, u_performance, u_count, u_price, u_priceallpcs");
+				//	$sp.getRecordValues(data.discObject, oneDiscGR, "u_mark, u_modell, u_performance, u_count, u_price, u_priceallpcs"); // vrati len cisla values
+				$sp.getRecordDisplayValues(data.discObject, oneDiscGR, "u_mark, u_modell, u_performance, u_count, u_price, u_priceallpcs, sys_id");  // vrati hodnoty labels
+			} else {
+				if(input.action =='updateDisc'){						 
+					var price = parseInt(input.discPrice);
+					var count = parseInt(input.discCount);
+					var originalCount = parseInt(oneDiscGR.getValue('u_count'));				 
+					var pricAll = '';
+
+					if((price)){
+						oneDiscGR.u_price = price;						 
+						pricAll = (originalCount * price);
+					} else {
+						if((count)){
+							var cnt = (count + originalCount);
+							oneDiscGR.u_count = cnt;
+							var originalPrice = parseInt(oneDiscGR.getValue('u_price'));
+							pricAll = cnt * originalPrice;
+						}
+					}
+					oneDiscGR.u_priceallpcs = pricAll;	
+					oneDiscGR.update();				
+					data.u_price = oneDiscGR.getValue('u_price');
+					data.u_count = oneDiscGR.getValue('u_count');					 
+					data.u_priceallpcs = oneDiscGR.getValue('u_priceallpcs');							
+				} else {
+					if(input.action =='deleteDisc'){					 
+						oneDiscGR.deleteRecord();
+					}
+				}
 			}
-
 		}
-
 	}
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-02-09 11:50:04</sys_created_on>
         <sys_id>57faebe68323de14fc9154d6feaad350</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>416</sys_mod_count>
         <sys_name>bmw body disc</sys_name>
         <sys_package display_value="Disc shop" source="x_1461179_disk_sho">ee28f9b783161a50fc9154d6feaad3bd</sys_package>
         <sys_policy/>
         <sys_scope display_value="Disc shop">ee28f9b783161a50fc9154d6feaad3bd</sys_scope>
         <sys_update_name>sp_widget_57faebe68323de14fc9154d6feaad350</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-10 11:08:28</sys_updated_on>
+        <sys_updated_on>2025-02-18 10:59:16</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
 
   <div class="panel-heading clearfix">    
@@ -107,27 +231,80 @@
           </h3>    
           <!-- ng-disabled="submitted" ng-click="c.displayAllDiscs()" ng-change="c.updateNote('title')"-->
 
-          <!--input type="button" value="Start machine" / </form> <p>The machine is stopped.</p> !-->                
+          <!--input type="button" value="Start machine" / </form> <p>The machine is stopped.</p> !--> 
 
-          <label for="disc-mark"> Znacka auta </label> 
-          <input class="form-control" id="disc-mark" ng-model="c.data.u_mark" />
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-primary btn-block" value="Update Disc Record" ng-click="c.updateButton()"> Update Disc Record </button>
+          </div>
 
-          <label for="disc-model"> Model auta </label> 
-          <input class="form-control" id="disc-model" ng-model="c.data.u_model" />
+          <div ng-if="c.update == true && c.data.sys_id" ng-disabled="submitted">              
 
-          <label for="disc-performance"> Prevedenie auta </label> 
-          <input class="form-control" id="disc-performance" ng-model="c.data.u_performance" />
-          
-           <label for="disc-count"> Pocet diskov </label> 
-          <input class="form-control" id="disc-count" ng-model="c.data.u_count" />
-          
-           <label for="disc-price"> Cena 1 disku </label> 
-          <input class="form-control" id="disc-price" ng-model="c.data.u_price" />
+            <div ng-show="prics">                  
+              Zadaj cenu disku:  
+              <select class="form-control" id="newPrice" ng-disabled="!prics" ng-model="c.data.newPrice" type="text" ng-change="c.displayChangedPriceDisc()">
+                <option value=""> Update price of the disc </option>                                   
+                <option ng-repeat="newPrice in prics" value='{{newPrice}}'>{{newPrice}}</option>
+              </select>        
+            </div>           
 
-           <label for="disc-priceallpcsk"> Cena vsetkych diskov </label> 
-          <input class="form-control" id="disc-priceallpcsk" ng-model="c.data.u_priceallpcsk" />
-          
-          <textarea class="form-control" id="disc-u_priceallpcsk" ng-model="c.data.u_priceallpcsk" ></textarea>
+            <!--label for="usr"> Nova cena disku </label>  <input type="text" class="form-control" id="usr" value={{c.data.newPrice}}!-->
+
+            <div class="input-group-btn">    
+              <button type="submit" value="Potvrď zmenu ceny"  ng-if="c.data.newPrice" ng-disabled="submitted" ng-click="c.updatePriceOrCount(c.data.newPrice)" class="btn btn-primary"> Potvrď zmenu ceny </button>
+            </div>    
+
+
+            <div ng-show="cnts">   
+              Zvys pocet diskov: 
+              <select class="form-control" type="text" id="newCount" ng-disabled="!cnts" ng-model="c.data.newCount" ng-change="c.displayChangedPriceDisc()"> <!-- ng-change="c.updatePriceDisc('title')"-->           
+                <option value=""> Update count of the disc </option>                                   
+                <option ng-repeat="newCount in cnts" value='{{newCount}}'>{{newCount}}</option>
+              </select>
+            </div> 
+
+            <div class="input-group-btn">
+              <button type="submit" value="Potvrď zvysenie poctu" ng-if="c.data.newCount" ng-disabled="submitted" ng-click="c.updatePriceOrCount(c.data.newCount)" class="btn btn-primary"> Potvrď zvysenie poctu </button>
+            </div>
+          </div>
+
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-primary btn-block" value="Delete Disc Record" ng-click="c.deleteButton()"> Delete Disc Record </button>
+          </div>
+
+
+          <div ng-if="c.data.sys_id" ng-disabled="submitted">  
+
+            <label for="disc-mark"> Znacka auta </label> 
+            <input class="form-control" id="disc-mark" ng-model="c.data.u_mark" />
+
+            <label for="disc-model"> Model auta </label> 
+            <input class="form-control" id="disc-model" ng-model="c.data.u_modell" />          
+
+            <label for="disc-performance"> Prevedenie auta </label> 
+            <input class="form-control" id="disc-performance" ng-model="c.data.u_performance" />
+
+            <label for="disc-priceallpcsk"> Cena vsetkych diskov </label> 
+            <input class="form-control" id="disc-priceallpcsk" ng-model="c.data.u_priceallpcs" />
+
+            <label for="disc-count"> Pocet diskov </label> 
+            <input class="form-control" id="disc-count" ng-model="c.data.u_count" />
+
+            <label for="disc-price"> Cena 1 disku </label> 
+            <input class="form-control" id="disc-price" ng-model="c.data.u_price" />  
+
+          </div>
+
+          <!-- textarea class="form-control" id="disc-u_priceallpcsk" ng-model="c.data.u_priceallpcs" ></textarea !-->
+          <!--input class="form-control" id="disc-price" ng-model="c.data.u_modell" ng-change="c.updateNote('title')" ng-model-options="{debounce: 1000}" /!-->
+
+          <!--form> <input type="button" value="Skusanie"/>  <!--ng-click="c.updateButton()"/< > </form!-->
+          <!--button ng-click='c.update()'>Update</button! ng-change="c.updateBrowser()"  ng-if="c.data.field1 != None" ng-disabled="submitted" -->          
+
+
+
+          <!--div> <div class="list-group-item"> <select ng-model="c.data.values" 
+          ng-options="item as item.label for item in c.data.values" class="form-control"/>
+           </div> </div !-->
 
           <div id="DiskyPlech" class="filter-form main-filter">
             <form act☼on method="get" novalidate>
